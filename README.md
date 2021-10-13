@@ -12,4 +12,4 @@ I have used FORMIK and YUP for contact validation and EMAILJS as mean of contact
 
 I have used scroll react to scroll up the page smoothly.
 
-Any improvements suggestions are welcomed.
+CURRENTLY UNDER DEVELOPMENT
