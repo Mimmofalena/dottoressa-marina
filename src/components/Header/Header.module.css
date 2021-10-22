@@ -1,0 +1,19 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(90deg, rgb(68, 139, 80), white);
+}
+
+.title {
+  padding: 0.5rem;
+}
+
+.phoneContainer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.phoneIcon {
+  height: 26px;
+}

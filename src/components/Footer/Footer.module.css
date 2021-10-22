@@ -1,0 +1,52 @@
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  min-height: 56px;
+  background-color: rgb(156, 153, 153);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phantom {
+  padding-left: 0.5rem;
+}
+
+.socialContainer {
+  display: flex;
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.copyrightIcon {
+  height: 26px;
+  width: 26px;
+}
+
+.facebookIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.mailIcon {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.twitterIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.instagramIcon {
+  height: 30px;
+  width: 30px;
+}
