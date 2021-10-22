@@ -1,14 +1,12 @@
 import React from "react";
-import phone from "../../assets/phone.svg";
 import {
-  AppBar,Box,Toolbar,
+  AppBar,Toolbar,
   Typography,
   Button,
-  CardMedia,  MenuList, MenuItem, Grid, Hidden, Menu, Container,Icon, SvgIcon, Paper
-} from "@material-ui/core";
+   MenuList, MenuItem, Grid, Hidden, Menu, Container,} from "@material-ui/core";
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 
-import { Link as RouterLink, NavLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { Link as MuiLink } from "@material-ui/core";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import IconButton from '@material-ui/core/IconButton';

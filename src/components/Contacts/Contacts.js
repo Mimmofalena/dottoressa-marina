@@ -1,6 +1,6 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage} from 'formik';
-import {Grid  , Typography, Box,  TextField , Button, ButtonGroup , CardContent, Card, CardMedia, LinearProgress,Container, IconButton } from "@material-ui/core";
+import {Grid  , Typography, Box,  TextField , Button,  CardContent, Card, LinearProgress,Container} from "@material-ui/core";
 
 import useStyles from '../Utils/Styles';
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,10 +12,6 @@ import emailjs from 'emailjs-com'
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
 const USER_ID = process.env.REACT_APP_EMAILJS_ID
-
-
-
-
 
 
  const Contacts = () => {

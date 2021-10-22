@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Grid, Typography, IconButton, Container,Box, Divider } from '@material-ui/core'
+import {Grid, Typography, IconButton, Container, Divider} from '@material-ui/core'
 import ArrowForward from "@material-ui/icons/ArrowForward"
 
 const Domanda = (props) => {
@@ -15,7 +15,6 @@ const Domanda = (props) => {
         <Grid onClick={clickHandler} item xs={12}
         container
         display="flex"
-        alignItems="flex"
         justifyContent="flex-start"
         spacing={2}
         >

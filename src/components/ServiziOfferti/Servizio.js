@@ -6,7 +6,7 @@ import ServiziOffertiDetail from './ServiziOffertiDetail'
 const Servizio = (props) => {
 
     const [displayMore, setDisplayMore] = useState(false)
-    console.log(props);
+   
 
 const clickHandler = ()=> {
     setDisplayMore(!displayMore)

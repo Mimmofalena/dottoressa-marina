@@ -1,8 +1,7 @@
 import React from 'react'
-import { useTheme,Typography, Box, CardContent, Card, Grid, CardMedia, SvgIcon, Container} from "@material-ui/core";
+import { useTheme,Typography, Box, CardContent, Card, Container} from "@material-ui/core";
 import Domanda from './Domanda';
 import DOMANDE from './Domande';
-import { motion } from 'framer-motion';
 import useStyles from '../Utils/Styles';
 
 const DomandeFrequenti = () => {

@@ -1,18 +1,17 @@
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import ImportContactsIcon from "@material-ui/icons/ImportContacts";
 import NoteIcon from "@material-ui/icons/Note";
-import {useTheme,Grid ,Typography,  Card, CardContent, Box, CardMedia} from "@material-ui/core";
+import {Grid ,Typography,  Card, CardContent, Box, CardMedia} from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import SyringeIcon from "../../assets/syringe-icon.svg";
 import React from "react";
 import Servizio from "./Servizio";
-import { motion } from "framer-motion";
 import useStyles from "../Utils/Styles";
 
 
 
 const ServiziOfferti = () => {
-  const theme = useTheme()
+ 
   const classes = useStyles()
 
   return (
