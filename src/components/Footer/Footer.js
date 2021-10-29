@@ -32,16 +32,16 @@ const Footer = () => {
       <Toolbar>
         <Grid container justifyContent='center' alignItems='center' spacing={1}>
           <Grid item>
-          <Typography variant='h6' component='h5' > Powered by Dom 
+          <Typography variant='h6' component='h5' > Powered by Dom © {new Date().getFullYear()}
  </Typography>
           </Grid>
-          <Grid item>
+          {/* <Grid item>
           <img
           src={copyrightIcon}
           alt="a black copyright icon"
           className={classes.iconSvg}
         />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Toolbar>
       {/* <Toolbar>

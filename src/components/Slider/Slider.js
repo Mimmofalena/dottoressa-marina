@@ -5,6 +5,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Carousel from 'react-material-ui-carousel'
 import MarinaStudioImg from '../../assets/marina-studio-medico.jpeg'
 import MarinaStudioImg2 from '../../assets/marina-studio-medico-2.jpeg'
+import { Box, Container } from '@material-ui/core';
 
 
 const DUMMY_IMGS = [ {
@@ -32,8 +33,10 @@ const Slider = () => {
  
     return (
     
-        <>
-    <Carousel  navButtonsAlwaysVisible={false}  NextIcon={<ArrowForwardIcon/> }
+        <Box mb={2}>
+            <Container>
+
+    <Carousel  navButtonsAlwaysVisible autoPlay={false} swipeable={true} NextIcon={<ArrowForwardIcon/> }
     PrevIcon={<ArrowBackIcon/>} >
 
             {DUMMY_IMGS.map(item=> { 
@@ -41,7 +44,9 @@ const Slider = () => {
                 
             })} 
             
-        </Carousel></>
+        </Carousel>
+            </Container>
+            </Box>
     )
 }
 

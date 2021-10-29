@@ -10,6 +10,8 @@ import { Switch, Route } from 'react-router'
 import ServiziOfferti from '../ServiziOfferti/ServiziOfferti'
 import ScrollToTop from './ScrollToTop'
 import Maps from '../Map/Maps'
+import Slider from '../Slider/Slider'
+import Carousel from '../Carousel/Carousel'
 
 
 const Layout = ({children}) => {
@@ -23,6 +25,11 @@ const Layout = ({children}) => {
   <Switch>
       <Route exact path="/">
   <Box className={classes.toolbar}></Box>
+
+        {/* <Slider/> */}
+
+        <Carousel/>   
+
   <ServiziOfferti/>
 
   <Curriculum />

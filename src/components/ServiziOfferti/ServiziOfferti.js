@@ -17,7 +17,7 @@ const ServiziOfferti = () => {
   return (
     
 
-    <Card className={classes.card} id='servizi-offerti' >
+    <Card  className={classes.card} id='servizi-offerti' >
       <CardContent>
 
     <Grid  container display='flex' direction='column' align='center' spacing={5}>

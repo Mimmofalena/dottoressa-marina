@@ -11,10 +11,9 @@ const useStyles = makeStyles({
 const SliderItem = (props) => {
     const classes = useStyles()
     return (
-        <>
-        <Container size='sm'>
-            <CardMedia className={classes.root}  component='img' src={props.src}></CardMedia>
-        </Container> </>
+       
+            <CardMedia  component='img' src={props.src}></CardMedia>
+        
     )
 }
 

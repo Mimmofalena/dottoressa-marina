@@ -1,0 +1,94 @@
+:root{
+    --primary-color: #009688
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.slider { 
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.arrowBack{
+    position: absolute;
+    top:50%;
+    left:8px;
+    z-index: 10;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.arrowBack:hover{
+    background-color: var(--primary-color)
+}
+.arrowForward:hover{
+    background-color: var(--primary-color)
+}
+
+.arrowForward{
+    position: absolute;
+    top:50%;
+    right:8px;
+    z-index: 10;
+    border-radius: 50px;
+    background-color: white;
+}
+
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.slideActive {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
+
+.imgClass {
+    width: 100%;
+}
+
+.containerDots{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    z-index: 10;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border:3px solid white;
+  background-color: white ;
+  margin:0 5px;
+}
+
+.dot:hover {
+    background: var(--primary-color)
+    
+}
+
+.dotActive{
+    background-color: var(--primary-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border:3px solid white;
+    margin:0 5px;
+}
+

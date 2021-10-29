@@ -10,9 +10,9 @@ const DomandeFrequenti = () => {
     const classes= useStyles()
     return (
         
-            <Card className={classes.card} id='domande-frequenti'  style={{backgroundColor:theme.palette.primary[400],}}>
+            <Card  className={classes.card} id='domande-frequenti'  style={{backgroundColor:theme.palette.primary[400],}}>
               
-        <CardContent>
+        <CardContent >
 
         <Container>
                     <Box p={2}>
