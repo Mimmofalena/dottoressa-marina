@@ -16,7 +16,12 @@ const useStyles = makeStyles((theme)=> (
     },
     card: {
       marginBottom:theme.spacing(2),
-    }
+    },
+    imageContainer: {     
+      height:'auto',
+      width:'100%'
+    },
+
     
 }))
 

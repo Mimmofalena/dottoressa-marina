@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from '@material-ui/core'
+import { Box, Card, CardMedia } from '@material-ui/core'
 import DomandeFrequenti from '../DomandeFrequenti/DomandeFrequenti'
 import Footer from '../Footer/Footer'
 import Contacts from '../Contacts/Contacts'
@@ -10,6 +10,8 @@ import { Switch, Route } from 'react-router'
 import ServiziOfferti from '../ServiziOfferti/ServiziOfferti'
 import ScrollToTop from './ScrollToTop'
 import Maps from '../Map/Maps'
+import MarinaPic from '../../assets/marina-studio-medico.jpeg'
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 
 const Layout = ({children}) => {
@@ -17,8 +19,14 @@ const Layout = ({children}) => {
     const classes = useStyles()
     return (
         <div>
+            <CssBaseline/>
             <Header  />
-  <Box className={classes.toolbar}></Box>
+        <Card className={classes.imageContainer}>
+            <CardMedia alt='dottoressa sorridente parla al telefono' component='img' src={MarinaPic}>
+
+            </CardMedia>
+        </Card>
+        
 
   <Switch>
       <Route exact path="/">

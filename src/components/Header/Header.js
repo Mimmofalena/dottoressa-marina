@@ -36,9 +36,10 @@ const Header = () => {
 
 
 
+
  
   return (
-
+<>
       <AppBar style={{backgroundColor:theme.palette.primary[400]}}>
         <Toolbar>
 
@@ -48,7 +49,8 @@ const Header = () => {
 
 <Grid item>
 <Container >
-    <MuiLink component={RouterLink} to='/' >
+  
+    <MuiLink component={RouterLink} to='/'  >
           <Typography color='textSecondary' align='center' component='h1' > Dott.ssa Marina Tricoli</Typography>
     </MuiLink>
  </Container>
@@ -266,6 +268,9 @@ const Header = () => {
 
         </Toolbar>
       </AppBar>
+      <div className={classes.toolbar} />
+      </>
+      
   );
 };
 
