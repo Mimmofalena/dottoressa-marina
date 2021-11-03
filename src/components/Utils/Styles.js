@@ -1,4 +1,4 @@
-import { makeStyles} from "@material-ui/core";
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme)=> (
   {
@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme)=> (
       height:'auto',
       width:'100%'
     },
+    textColor:{
+      color:'#000000'
+    },
+    headerTitle:{
+      textDecoration:'none'
+    }
 
     
 }))

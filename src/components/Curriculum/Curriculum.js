@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box, CardContent, Card, Container} from "@material-ui/core";
+import { Typography, Box, CardContent, Card, Container} from "@mui/material";
 import useStyles from '../Utils/Styles';
 
 

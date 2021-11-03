@@ -1,7 +1,8 @@
 import {React, useState} from 'react'
 import {animateScroll} from 'react-scroll'
-import { Box, makeStyles } from '@material-ui/core'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import { Box } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const useStyles = makeStyles( theme => ({
     arrowIcon: {

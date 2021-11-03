@@ -1,5 +1,7 @@
 import React from 'react'
-import { CardMedia, Container, makeStyles } from '@material-ui/core'
+import { CardMedia, Container } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles({
     root:{

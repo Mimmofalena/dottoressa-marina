@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import { mapStyles } from './MapsStyles'
-import { Box,  Card, CardContent } from '@material-ui/core'
+import { Box,  Card, CardContent } from '@mui/material'
 import { GoogleMap, useLoadScript, Marker, InfoWindow } from '@react-google-maps/api'
-import { Typography, useTheme } from '@material-ui/core'
+import { Typography, useTheme } from '@mui/material'
 import useStyles from '../Utils/Styles'
 
 

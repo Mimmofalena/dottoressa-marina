@@ -1,5 +1,5 @@
 
-import { Typography } from '@material-ui/core'
+import { Typography } from '@mui/material'
 import React from 'react'
 
 const ServiziOffertiDetail = () => {

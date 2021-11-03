@@ -1,8 +1,8 @@
-import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
-import ImportContactsIcon from "@material-ui/icons/ImportContacts";
-import NoteIcon from "@material-ui/icons/Note";
-import {Grid ,Typography,  Card, CardContent, Box, CardMedia} from "@material-ui/core";
-import HomeIcon from "@material-ui/icons/Home";
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
+import NoteIcon from "@mui/icons-material/Note";
+import {Grid ,Typography,  Card, CardContent, Box, CardMedia, Container} from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
 import SyringeIcon from "../../assets/syringe-icon.svg";
 import React from "react";
 import Servizio from "./Servizio";
@@ -19,6 +19,9 @@ const ServiziOfferti = () => {
 
     <Card className={classes.card} id='servizi-offerti' >
       <CardContent>
+        <Container>
+
+        
 
     <Grid  container display='flex' direction='column' align='center' spacing={5}>
 
@@ -48,7 +51,7 @@ const ServiziOfferti = () => {
       </Grid>
 
      
-     
+      </Container>
       </CardContent>
     </Card>
     

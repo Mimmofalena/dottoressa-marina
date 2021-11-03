@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Card, CardMedia } from '@material-ui/core'
+import { Box, Card, CardMedia } from '@mui/material'
 import DomandeFrequenti from '../DomandeFrequenti/DomandeFrequenti'
 import Footer from '../Footer/Footer'
 import Contacts from '../Contacts/Contacts'
@@ -11,7 +11,8 @@ import ServiziOfferti from '../ServiziOfferti/ServiziOfferti'
 import ScrollToTop from './ScrollToTop'
 import Maps from '../Map/Maps'
 import MarinaPic from '../../assets/marina-studio-medico.jpeg'
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
+
 
 
 const Layout = ({children}) => {
@@ -20,6 +21,7 @@ const Layout = ({children}) => {
     return (
         <div>
             <CssBaseline/>
+           
             <Header  />
         <Card className={classes.imageContainer}>
             <CardMedia alt='dottoressa sorridente parla al telefono' component='img' src={MarinaPic}>

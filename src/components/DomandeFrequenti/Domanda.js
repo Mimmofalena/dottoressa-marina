@@ -1,17 +1,15 @@
 import React,{useState} from 'react'
-import {Grid, Typography, IconButton, Container, Divider} from '@material-ui/core'
-import ArrowForward from "@material-ui/icons/ArrowForward"
+import {Grid, Typography, IconButton, Container, Divider} from '@mui/material'
+import ArrowForward from "@mui/icons-material/ArrowForward"
 
 const Domanda = (props) => {
     const [displayMore, setDisplayMore] = useState(false)
 
-    const clickHandler = ()=> {
+    const clickHandler = (e)=> {
         setDisplayMore(!displayMore)
     }
 
     return (
-         
-     
         <Grid onClick={clickHandler} style={{cursor: 'pointer'}} item xs={12}
         container
         display="flex"
@@ -21,7 +19,7 @@ const Domanda = (props) => {
         <Grid item xs={12} spacing={2} container display='flex' alignItems='center' justifyContent='flex-start' >
         
         <Grid item xs={2}>
-            <IconButton >
+            <IconButton size="large">
             <ArrowForward/>
             </IconButton>
         </Grid>
@@ -41,8 +39,7 @@ const Domanda = (props) => {
         </Grid>
 
       </Grid>
-     
-    )
+    );
 }
 
 export default Domanda

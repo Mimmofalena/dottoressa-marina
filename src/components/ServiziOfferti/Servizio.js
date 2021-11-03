@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Grid, Typography, IconButton } from '@material-ui/core'
-import ArrowDropDown from "@material-ui/icons/ArrowDropDown"
+import { Grid, Typography, IconButton } from '@mui/material'
+import ArrowDropDown from "@mui/icons-material/ArrowDropDown"
 import ServiziOffertiDetail from './ServiziOffertiDetail'
 
 const Servizio = (props) => {
@@ -13,7 +13,6 @@ const clickHandler = ()=> {
 }
 
     return (
-        
         <Grid onClick={clickHandler} style={{cursor: 'pointer'}} item xs={12}
         container
         display="flex"
@@ -36,7 +35,7 @@ const clickHandler = ()=> {
         <Grid item xs={6}></Grid>
         <Grid item xs={6}>
 
-            <IconButton >
+            <IconButton size="large">
             <ArrowDropDown/>
             </IconButton>
 
@@ -49,7 +48,7 @@ const clickHandler = ()=> {
         </Grid>
 
       </Grid>
-    )
+    );
 }
 
 export default Servizio

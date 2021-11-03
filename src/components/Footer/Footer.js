@@ -7,7 +7,7 @@ import {
   Grid,
   useTheme,
   //  Hidden, Link
-} from "@material-ui/core";
+} from "@mui/material";
 // import {Link as Scroll} from 'react-scroll'
 // import facebookIcon from "../../assets/facebook-icon.svg";
 // import twitterIcon from "../../assets/twitter-icon.svg";

@@ -5,23 +5,26 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router } from "react-router-dom";
-import {ThemeProvider, createTheme} from '@material-ui/core'
-import { orange, teal } from '@material-ui/core/colors';
+import { ThemeProvider, StyledEngineProvider, createTheme, adaptV4Theme } from '@mui/material';
+import { orange, teal } from '@mui/material/colors';
 
-const theme = createTheme({
+const theme = createTheme(adaptV4Theme({
   palette:{
     primary:teal ,
     secondary:orange
   },
-})
+  
+}))
 
 ReactDOM.render(
   
   <React.StrictMode>
     <Router basename='/dottoressa-marina'>
-    <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+    </StyledEngineProvider>
   </Router>
   </React.StrictMode>,
   document.getElementById('root')
