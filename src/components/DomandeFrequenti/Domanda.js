@@ -12,7 +12,7 @@ const Domanda = (props) => {
     return (
          
      
-        <Grid onClick={clickHandler} item xs={12}
+        <Grid onClick={clickHandler} style={{cursor: 'pointer'}} item xs={12}
         container
         display="flex"
         justifyContent="flex-start"

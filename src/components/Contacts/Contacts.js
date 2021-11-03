@@ -1,6 +1,8 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage} from 'formik';
-import {Grid  , Typography, Box,  TextField , Button,  CardContent, Card, LinearProgress,Container} from "@material-ui/core";
+import {Grid , Typography, Box,  TextField , Button,  CardContent, Card,Container } from "@material-ui/core";
+
+
 
 import useStyles from '../Utils/Styles';
 import { ToastContainer, toast } from 'react-toastify';
@@ -20,14 +22,17 @@ const USER_ID = process.env.REACT_APP_EMAILJS_ID
   const sendEmailHandler = (object)=> {
  
     emailjs.send(SERVICE_ID,TEMPLATE_ID, object, USER_ID).then(result=> {
-      console.log(result.text);
+     
+     
       toast.success('Messaggio inviato con successo')
      
     }, error=> {
+     
       toast.error("Si e' verificato un errore!" )
     
       console.log(error);
-    })
+    } )
+   
   }
 
 
@@ -68,6 +73,7 @@ const validationSchema = Yup.object({
        </Box>
      
        <Formik onSubmit={(values,actions)=> {
+         console.log(actions)
          
            sendEmailHandler(values)
            actions.setSubmitting(false)
@@ -78,9 +84,7 @@ const validationSchema = Yup.object({
          
      {formik=> {
        return (
-         <>
-           {formik.isSubmitting && <Box m={2}><LinearProgress/></Box> } 
-          
+         <>          
          <Form>
      
         
@@ -150,7 +154,9 @@ const validationSchema = Yup.object({
      
      
       <Box textAlign='center'>
+        
       <Button  disabled={formik.isSubmitting}  type="submit" variant='contained' color='primary'>Submit</Button>
+   
       </Box>
     
      </Form>
