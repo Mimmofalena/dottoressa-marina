@@ -17,15 +17,18 @@ const ServiziOfferti = () => {
   return (
     
 
-    <Card className={classes.card} id='servizi-offerti' >
+    <Card square className={classes.card} id='servizi-offerti' >
       <CardContent>
         <Container>
 
         
+    
 
+
+    
     <Grid  container display='flex' direction='column' align='center' spacing={5}>
 
-<Box p={2} mb={2} >
+<Box p={2} m={2} >
 
       <Grid item xs={12} >
         <Typography variant="h4" color="initial" align="center">

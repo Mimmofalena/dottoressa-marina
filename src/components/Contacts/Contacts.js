@@ -53,13 +53,13 @@ const validationSchema = Yup.object({
 
    return (
 
-<Card className={classes.card} id='contattami' >
+<Card square className={classes.card} id='contattami' >
      
       
-     <CardContent >
+     <CardContent  >
      
      <Container>
-     <Box p={2} >
+     
      
      
      
@@ -85,7 +85,7 @@ const validationSchema = Yup.object({
      {formik=> {
        return (
          <>          
-         <Form>
+         <Form  className={classes.form}>
      
         
      
@@ -171,7 +171,7 @@ const validationSchema = Yup.object({
      
      
        
-       </Box>
+       
      </Container>
      
      </CardContent>

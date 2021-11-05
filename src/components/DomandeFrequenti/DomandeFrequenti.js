@@ -10,12 +10,12 @@ const DomandeFrequenti = () => {
     const classes= useStyles()
     return (
         
-            <Card className={classes.card} id='domande-frequenti'  style={{backgroundColor:theme.palette.primary[400],}}>
+            <Card square className={classes.card} id='domande-frequenti'  style={{backgroundColor:theme.palette.primary[400],}}>
               
         <CardContent>
 
         <Container>
-                    <Box p={2}>
+                    
                     <Typography align='center' variant='h4'>
            Domande Frequenti
            </Typography>
@@ -31,7 +31,7 @@ const DomandeFrequenti = () => {
             
            return <Domanda key={dom.title} title={dom.title} answer={dom.answer}/>
         })}
-             </Box>
+             
                 </Container>
            
         </CardContent>

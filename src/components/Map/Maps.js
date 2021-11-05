@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { mapStyles } from './MapsStyles'
-import { Box,  Card, CardContent } from '@mui/material'
+import { Box,  Card, CardContent, Container } from '@mui/material'
 import { GoogleMap, useLoadScript, Marker, InfoWindow } from '@react-google-maps/api'
 import { Typography, useTheme } from '@mui/material'
 import useStyles from '../Utils/Styles'
@@ -48,7 +48,7 @@ const options = {
         </div>
     } 
 
-    return     <Card className={classes.card} id='dove-trovarmi'  style={{backgroundColor:theme.palette.primary[400]}}>
+    return     <Card square className={classes.card} id='dove-trovarmi'  style={{backgroundColor:theme.palette.primary[400]}}>
 
         <CardContent>
 
@@ -66,10 +66,21 @@ const options = {
         }} position={{lat: 38.1469877, lng: 13.3391305}}  />
        { selected ? <InfoWindow position={{lat: 38.1469877, lng: 13.3391305}}   onCloseClick={()=>{setSelected(false)}}><div><h4>Dr.ssa Marina Tricoli</h4></div></InfoWindow> : null}
     </GoogleMap>
+
+    <Container>
     
-    <Box mt={1}>
+    <Box mt={4}>
         <Typography gutterBottom variant='h6' align='center'>Indirizzo: Via Emilia 34, Palermo</Typography>
     </Box>
+    <Box mt={4}>
+       
+
+        <Typography gutterBottom variant='h6' align='center'><strong>Orari:</strong><br/> Lun/Merc/Giov: 15.15 - 17.15<br/>Martedi': 09.30 - 11.30<br/>Venerdi:11.00 - 13.00</Typography>
+       
+    </Box>
+
+    </Container>
+    
   
         </CardContent>
     </Card>

@@ -16,15 +16,15 @@ const Domanda = (props) => {
         justifyContent="flex-start"
         spacing={2}
         >
-        <Grid item xs={12} spacing={2} container display='flex' alignItems='center' justifyContent='flex-start' >
+        <Grid item xs={12} container display='flex' alignItems='center' justifyContent='flex-start' >
         
-        <Grid item xs={2}>
+        <Grid item xs={1}>
             <IconButton size="large">
             <ArrowForward/>
             </IconButton>
         </Grid>
 
-        <Grid item xs={10}>
+        <Grid item xs={11}>
             <Typography variant='h6'>{props.title}</Typography>
         </Grid>
 

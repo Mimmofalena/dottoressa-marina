@@ -32,7 +32,7 @@ const Footer = () => {
       <Toolbar>
         <Grid container justifyContent='center' alignItems='center' spacing={1}>
           <Grid item>
-          <Typography variant='h6' component='h5' > Powered by Dom 
+          <Typography color='textPrimary' variant='h6' component='h5' > Powered by Dom 
  </Typography>
           </Grid>
           <Grid item>

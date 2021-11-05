@@ -16,6 +16,8 @@ const useStyles = makeStyles((theme)=> (
     },
     card: {
       marginBottom:theme.spacing(2),
+      border:'none',
+      boxShadow:'none'
     },
     imageContainer: {     
       height:'auto',
@@ -26,9 +28,11 @@ const useStyles = makeStyles((theme)=> (
     },
     headerTitle:{
       textDecoration:'none'
+    },
+    form:{
+      minWidth:'100%'
     }
-
-    
+   
 }))
 
 

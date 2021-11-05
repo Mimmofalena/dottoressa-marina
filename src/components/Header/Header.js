@@ -50,7 +50,7 @@ const Header = () => {
   <Container >
     
       <MuiLink className={classes.headerTitle} component={RouterLink} to='/'  >
-            <Typography className={classes.headerTitle} color='textSecondary' align='center' component='h1' > Dott.ssa Marina Tricoli</Typography>
+            <Typography className={classes.headerTitle} color='textPrimary' align='center' component='h1' > Dott.ssa Marina Tricoli</Typography>
       </MuiLink>
    </Container>
   </Grid>
@@ -126,7 +126,7 @@ const Header = () => {
   <Grid item>
   <Container >
   <MuiLink className={classes.headerTitle} component={RouterLink} to='/' >
-            <Typography className={classes.headerTitle} color='textSecondary' align='center' component='h1' variant='h5' > Dott.ssa Marina Tricoli</Typography>
+            <Typography className={classes.headerTitle} color='textPrimary' align='center' component='h1' variant='h5' > Dott.ssa Marina Tricoli</Typography>
    </MuiLink>
    </Container>
   </Grid>
@@ -211,7 +211,7 @@ const Header = () => {
   <Container >
   <MuiLink className={classes.headerTitle}  component={RouterLink} to='/' >
 
-            <Typography  color='textSecondary' align='center' component='h1' variant='h4' > Dott.ssa Marina Tricoli</Typography>
+            <Typography  color='textPrimary' align='center' component='h1' variant='h4' > Dott.ssa Marina Tricoli</Typography>
     </MuiLink>
    </Container>
   </Grid>
