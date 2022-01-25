@@ -55,16 +55,8 @@ const Servizio = (props) => {
     //   </Grid>
     // </Grid>
 
-    <Box>
-      <Grid
-        spacing={2}
-        container
-        display="flex"
-        flexWrap="wrap"
-        alignItems="cente"
-        justifyContent="start"
-        ml={2}
-      >
+    <Box width={300}>
+      <Grid spacing={2} container alignItems="center" ml={2}>
         <Grid item>{props.icon}</Grid>
         <Grid item>
           <Typography variant={"h6"}>{props.typography}</Typography>
