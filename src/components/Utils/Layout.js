@@ -28,7 +28,7 @@ const Layout = () => {
 
       <Header />
       <Box className={classes.toolbar}></Box>
-      <Card raised className={classes.imageContainer}>
+      <Card className={classes.card}>
         <Grid container spacing={2}>
           <Grid item md={8}>
             <CardMedia

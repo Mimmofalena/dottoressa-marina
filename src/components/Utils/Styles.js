@@ -19,13 +19,9 @@ const useStyles = makeStyles((theme) => ({
     border: "none",
     boxShadow: "none",
   },
-  imageContainer: {
-    marginBottom: theme.spacing(2),
-    // padding: "1rem",
-    // height: "auto",
-    // width: "80%",
-    // margin: "1rem auto",
-    // borderRadius: "15px",
+  icon: {
+    height: "32px",
+    width: "32px",
   },
   textColor: {
     color: "#000000",
