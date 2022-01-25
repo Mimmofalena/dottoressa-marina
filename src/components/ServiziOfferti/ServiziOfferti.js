@@ -1,15 +1,7 @@
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import NoteIcon from "@mui/icons-material/Note";
-import {
-  Grid,
-  Typography,
-  Card,
-  CardContent,
-  Box,
-  CardMedia,
-  Container,
-} from "@mui/material";
+import { Grid, Typography, Card, CardContent, CardMedia } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SyringeIcon from "../../assets/syringe-icon.svg";
 import React from "react";
@@ -22,7 +14,6 @@ const ServiziOfferti = () => {
   const theme = useTheme();
 
   return (
-    /////////////////////////
     <Card
       style={{ backgroundColor: theme.palette.primary[400] }}
       className={classes.card}

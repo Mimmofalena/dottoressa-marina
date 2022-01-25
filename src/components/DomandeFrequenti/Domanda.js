@@ -1,45 +1,105 @@
-import React,{useState} from 'react'
-import {Grid, Typography, IconButton, Container, Divider} from '@mui/material'
-import ArrowForward from "@mui/icons-material/ArrowForward"
+import React, { useState } from "react";
+import { Grid, Typography, Box, Divider } from "@mui/material";
+import ArrowForward from "@mui/icons-material/ArrowForward";
+import useStyles from "../Utils/Styles";
+import { useTheme } from "@mui/styles";
 
 const Domanda = (props) => {
-    const [displayMore, setDisplayMore] = useState(false)
+  const theme = useTheme();
+  const classes = useStyles();
+  const [displayMore, setDisplayMore] = useState(false);
 
-    const clickHandler = (e)=> {
-        setDisplayMore(!displayMore)
-    }
+  const clickHandler = () => {
+    setDisplayMore(!displayMore);
+  };
 
-    return (
-        <Grid onClick={clickHandler} style={{cursor: 'pointer'}} item xs={12}
-        container
-        display="flex"
-        justifyContent="flex-start"
-        spacing={2}
+  return (
+    <Grid
+      onClick={clickHandler}
+      style={{ cursor: "pointer" }}
+      item
+      xs={12}
+      container
+      spacing={2}
+    >
+      <Grid item xs={12} container>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            alignItems: "center",
+            backgroundColor: theme.palette.primary[200],
+            "&:hover": {
+              opacity: 0.5,
+            },
+          }}
         >
-        <Grid item xs={12} container display='flex' alignItems='center' justifyContent='flex-start' >
-        
-        <Grid item xs={1}>
-            <IconButton size="large">
-            <ArrowForward/>
-            </IconButton>
-        </Grid>
+          <ArrowForward
+            className={classes.icon}
+            style={{
+              backgroundColor: "white",
+              height: "160px",
+              marginRight: "1rem",
+            }}
+          />
 
-        <Grid item xs={11}>
-            <Typography variant='h6'>{props.title}</Typography>
-        </Grid>
+          <Typography variant="h6">{props.title}</Typography>
+        </Box>
 
-        
-        </Grid>
-
-
-        <Grid item xs={12}>
-            <Container>
-            {displayMore && <Typography align='justify' variant='body2'>{props.answer} <Divider/></Typography>}
-            </Container>
-        </Grid>
-
+        {/* <Grid item xs={11}>
+          <Typography variant="h6">{props.title}</Typography>
+        </Grid> */}
       </Grid>
-    );
-}
 
-export default Domanda
+      <Grid p={2} item xs={12}>
+        {displayMore && (
+          <Typography align="justify" variant="body2">
+            {props.answer} <Divider />
+          </Typography>
+        )}
+      </Grid>
+    </Grid>
+
+    // <Grid
+    //   onClick={clickHandler}
+    //   style={{ cursor: "pointer" }}
+    //   item
+    //   xs={12}
+    //   container
+    //   display="flex"
+    //   justifyContent="flex-start"
+    //   spacing={2}
+    // >
+    //   <Grid
+    //     item
+    //     xs={12}
+    //     container
+    //     display="flex"
+    //     alignItems="center"
+    //     justifyContent="flex-start"
+    //   >
+    //     <Grid item xs={1}>
+    //       <IconButton size="large">
+    //         <ArrowForward />
+    //       </IconButton>
+    //     </Grid>
+
+    //     <Grid item xs={11}>
+    //       <Typography variant="h6">{props.title}</Typography>
+    //     </Grid>
+    //   </Grid>
+
+    //   <Grid item xs={12}>
+    //     <Container>
+    //       {displayMore && (
+    //         <Typography align="justify" variant="body2">
+    //           {props.answer} <Divider />
+    //         </Typography>
+    //       )}
+    //     </Container>
+    //   </Grid>
+    // </Grid>
+  );
+};
+
+export default Domanda;

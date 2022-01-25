@@ -1,19 +1,24 @@
-const DOMANDE = [{
-    title: 'Cosa fare in caso di emergenza?',
+const DOMANDE = [
+  {
+    title: "Cosa fare in caso di emergenza?",
     answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-    `
-},
-{title:'Quanto si paga un certificato?',
-answer:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+    `,
+  },
+  {
+    title: "Quanto si paga un certificato?",
+    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-`},
-{title:'Avere l’assistenza sanitaria temporanea quando si è momentaneamente domiciliati presso una Regione diversa da quella di residenza?',
-answer:`Il cittadino può scegliere il Medico di Medicina Generale e/o Pediatra di Libera Scelta pur essendo residente in altra Regione purché la durata del trasferimento sia pari o superiore ai tre mesi e sia riconducibile ad una delle seguenti motivazioni:
+`,
+  },
+  {
+    title:
+      "Avere l’assistenza sanitaria temporanea quando si è momentaneamente domiciliati presso una Regione diversa da quella di residenza?",
+    answer: `Il cittadino può scegliere il Medico di Medicina Generale e/o Pediatra di Libera Scelta pur essendo residente in altra Regione purché la durata del trasferimento sia pari o superiore ai tre mesi e sia riconducibile ad una delle seguenti motivazioni:
 >> lavoro
 >> salute
 >> studio
@@ -36,21 +41,32 @@ e) secondo la motivazione della scelta temporanea:
 > certificazione del Medico di accettazione presa in carico del paziente per motivi di salute.
 > dichiarazione Università, Scuola, Convitto etc.
 
-Riferimenti normativi: Circolare del Ministero della Sanità 11 maggio 1984, n. 1000.116`},
-{title:'Vaccini', answer:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+Riferimenti normativi: Circolare del Ministero della Sanità 11 maggio 1984, n. 1000.116`,
+  },
+  {
+    title: "Quali Vaccinazioni sono disponibili? Come posso prenotarmi?",
+    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-`},
-{title:'Visite domiciliari', answer:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+`,
+  },
+  {
+    title: "Quando posso richiedere una visita domiciliare?",
+    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-`},
-{title:'Esenzioni', answer:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+`,
+  },
+  {
+    title: "Come posso usare le Esenzioni?",
+    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-`},]
+`,
+  },
+];
 
-export default DOMANDE
+export default DOMANDE;

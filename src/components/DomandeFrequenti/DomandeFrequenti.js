@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  useTheme,
-  Typography,
-  Box,
-  CardContent,
-  Card,
-  Container,
-} from "@mui/material";
+import { useTheme, Typography, Box, CardContent, Card } from "@mui/material";
 import Domanda from "./Domanda";
 import DOMANDE from "./Domande";
 import useStyles from "../Utils/Styles";
@@ -22,26 +15,24 @@ const DomandeFrequenti = () => {
       style={{ backgroundColor: theme.palette.primary[400] }}
     >
       <CardContent>
-        <Container>
-          <Typography align="center" variant="h4">
-            Domande Frequenti
+        <Typography align="center" variant="h4">
+          Domande Frequenti
+        </Typography>
+
+        <Box p={2}>
+          <Typography align="justify" variant="subtitle1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            sequi debitis maxime! Minima praesentium itaque eligendi aliquam,
+            hic dolorem officiis tempora delectus harum? Reprehenderit illo iure
+            tempore sunt voluptates soluta?
           </Typography>
+        </Box>
 
-          <Box p={2}>
-            <Typography align="justify" variant="subtitle1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium sequi debitis maxime! Minima praesentium itaque
-              eligendi aliquam, hic dolorem officiis tempora delectus harum?
-              Reprehenderit illo iure tempore sunt voluptates soluta?
-            </Typography>
-          </Box>
-
-          {DOMANDE.map((dom) => {
-            return (
-              <Domanda key={dom.title} title={dom.title} answer={dom.answer} />
-            );
-          })}
-        </Container>
+        {DOMANDE.map((dom) => {
+          return (
+            <Domanda key={dom.title} title={dom.title} answer={dom.answer} />
+          );
+        })}
       </CardContent>
     </Card>
   );
