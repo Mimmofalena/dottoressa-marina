@@ -14,15 +14,8 @@ const Domanda = (props) => {
   };
 
   return (
-    <Grid
-      onClick={clickHandler}
-      style={{ cursor: "pointer" }}
-      item
-      xs={12}
-      container
-      spacing={2}
-    >
-      <Grid item xs={12} container>
+    <Grid style={{ cursor: "pointer" }} item xs={12} container spacing={2}>
+      <Grid onClick={clickHandler} item xs={12} container>
         <Box
           sx={{
             display: "flex",
@@ -38,12 +31,14 @@ const Domanda = (props) => {
             className={classes.icon}
             style={{
               backgroundColor: "white",
-              height: "160px",
+              height: "180px",
               marginRight: "1rem",
             }}
           />
 
-          <Typography variant="h6">{props.title}</Typography>
+          <Typography variant="h6" ml={1}>
+            {props.title}
+          </Typography>
         </Box>
 
         {/* <Grid item xs={11}>
@@ -51,7 +46,7 @@ const Domanda = (props) => {
         </Grid> */}
       </Grid>
 
-      <Grid p={2} item xs={12}>
+      <Grid sx={{ cursor: "default" }} p={2} item xs={12}>
         {displayMore && (
           <Typography align="justify" variant="body2">
             {props.answer} <Divider />

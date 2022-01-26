@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion/dist/es/index";
 import {
   Box,
   Card,
@@ -28,14 +29,21 @@ const Layout = () => {
 
       <Header />
       <Box className={classes.toolbar}></Box>
+
       <Card className={classes.card}>
         <Grid container spacing={2}>
           <Grid item md={8}>
-            <CardMedia
-              alt="dottoressa sorridente parla al telefono"
-              component="img"
-              src={MarinaPic}
-            ></CardMedia>
+            <motion.div
+              initial={{ opacity: 0, translateX: "-100%" }}
+              animate={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              <CardMedia
+                alt="dottoressa sorridente parla al telefono"
+                component="img"
+                src={MarinaPic}
+              ></CardMedia>
+            </motion.div>
           </Grid>
           <Grid item md={4}>
             <CardContent>
