@@ -156,7 +156,7 @@ const Contacts = () => {
                         disabled={formik.isSubmitting}
                         type="submit"
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                       >
                         Submit
                       </Button>

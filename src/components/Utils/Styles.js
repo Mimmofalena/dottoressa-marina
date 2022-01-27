@@ -32,6 +32,22 @@ const useStyles = makeStyles((theme) => ({
   form: {
     minWidth: "100%",
   },
+  arrowIcon: {
+    height: "3rem",
+    width: "3rem",
+    borderRadius: "50%",
+    borderColor: "4px",
+    backgroundColor: theme.palette.secondary[400],
+    cursor: "pointer",
+    position: "fixed",
+    bottom: "3rem",
+    left: "87%",
+    marginBottom: "2rem",
+    zIndex: "100",
+    "&:hover": {
+      opacity: 0.6,
+    },
+  },
 }));
 
 export default useStyles;

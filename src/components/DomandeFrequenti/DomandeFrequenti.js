@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme, Typography, Box, CardContent, Card } from "@mui/material";
+import { useTheme, Typography, CardContent, Card } from "@mui/material";
 import Domanda from "./Domanda";
 import DOMANDE from "./Domande";
 import useStyles from "../Utils/Styles";
@@ -19,14 +19,12 @@ const DomandeFrequenti = () => {
           Domande Frequenti
         </Typography>
 
-        <Box p={2}>
-          <Typography align="justify" variant="subtitle1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            sequi debitis maxime! Minima praesentium itaque eligendi aliquam,
-            hic dolorem officiis tempora delectus harum? Reprehenderit illo iure
-            tempore sunt voluptates soluta?
-          </Typography>
-        </Box>
+        <Typography p={2} align="justify" variant="subtitle1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+          sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic
+          dolorem officiis tempora delectus harum? Reprehenderit illo iure
+          tempore sunt voluptates soluta?
+        </Typography>
 
         {DOMANDE.map((dom) => {
           return (
