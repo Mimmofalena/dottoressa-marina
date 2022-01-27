@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme) => ({
   },
   menuItem: {
     color: theme.palette.text.secondary,
+    borderRadius: "15px",
+    transition: "1s ease",
+    "&:hover": {
+      backgroundColor: "white",
+      opacity: 0.5,
+    },
   },
   toolbar: theme.mixins.toolbar,
   inputField: {
@@ -41,11 +47,13 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     position: "fixed",
     bottom: "3rem",
-    left: "87%",
+    left: "85%",
     marginBottom: "2rem",
     zIndex: "100",
+    transition: "0.5s ease",
     "&:hover": {
       opacity: 0.6,
+      transform: "scale(1.2)",
     },
   },
 }));

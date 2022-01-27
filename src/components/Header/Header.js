@@ -39,10 +39,15 @@ const Header = () => {
       <AppBar style={{ backgroundColor: theme.palette.primary[400] }}>
         <Toolbar>
           {/* /small Screen size  */}
+
           <Hidden smUp>
-            <Grid container justifyContent="space-between" alignItems="center">
-              <Grid item>
-                <Container>
+            <Container>
+              <Grid
+                container
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Grid item>
                   <MuiLink
                     className={classes.headerTitle}
                     component={RouterLink}
@@ -54,23 +59,18 @@ const Header = () => {
                       align="center"
                       component="h1"
                     >
-                      {" "}
                       Dr.ssa Marina Tricoli
                     </Typography>
                   </MuiLink>
-                </Container>
-              </Grid>
+                </Grid>
 
-              <Grid item>
-                <Container>
+                <Grid item>
                   <IconButton size="small" href="tel:+393512530433">
                     <PhoneAndroidIcon />
                   </IconButton>
-                </Container>
-              </Grid>
+                </Grid>
 
-              <Grid item>
-                <Container>
+                <Grid item>
                   <IconButton
                     size="small"
                     aria-controls="simple-menu"
@@ -80,6 +80,15 @@ const Header = () => {
                     <MoreHorizIcon />
                   </IconButton>
                   <Menu
+                    // PaperProps={{ style: { width: "100%" } }}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "center",
+                    }}
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "center",
+                    }}
                     id="simple-menu"
                     anchorEl={anchorEl}
                     keepMounted
@@ -132,17 +141,21 @@ const Header = () => {
                       <MenuItem onClick={handleClose}>Dove trovarmi</MenuItem>
                     </Link>
                   </Menu>
-                </Container>
+                </Grid>
               </Grid>
-            </Grid>
+            </Container>
           </Hidden>
 
           {/* /medium Screen size  */}
 
           <Hidden mdUp smDown>
-            <Grid container justifyContent="space-between" alignItems="center">
-              <Grid item>
-                <Container>
+            <Container>
+              <Grid
+                container
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Grid item>
                   <MuiLink
                     className={classes.headerTitle}
                     component={RouterLink}
@@ -159,11 +172,9 @@ const Header = () => {
                       Dott.ssa Marina Tricoli
                     </Typography>
                   </MuiLink>
-                </Container>
-              </Grid>
+                </Grid>
 
-              <Grid item>
-                <Container>
+                <Grid item>
                   <Button
                     className={classes.textColor}
                     startIcon={<PhoneAndroidIcon />}
@@ -172,11 +183,9 @@ const Header = () => {
                   >
                     3512530433
                   </Button>
-                </Container>
-              </Grid>
+                </Grid>
 
-              <Grid item>
-                <Container>
+                <Grid item>
                   <Button
                     className={classes.textColor}
                     size="medium"
@@ -187,6 +196,14 @@ const Header = () => {
                     Menu
                   </Button>
                   <Menu
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "center",
+                    }}
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "center",
+                    }}
                     id="simple-menu"
                     anchorEl={anchorEl}
                     keepMounted
@@ -239,17 +256,21 @@ const Header = () => {
                       <MenuItem onClick={handleClose}>Dove trovarmi</MenuItem>
                     </Link>
                   </Menu>
-                </Container>
+                </Grid>
               </Grid>
-            </Grid>
+            </Container>
           </Hidden>
 
           {/* /large Screen size  */}
 
           <Hidden mdDown>
-            <Grid container justifyContent="space-between" alignItems="center">
-              <Grid item md={6}>
-                <Container>
+            <Container>
+              <Grid
+                container
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Grid item md={6}>
                   <MuiLink
                     className={classes.headerTitle}
                     component={RouterLink}
@@ -260,17 +281,16 @@ const Header = () => {
                       align="center"
                       component="h1"
                       variant="h4"
+                      p={1}
                     >
                       {" "}
                       Dott.ssa Marina Tricoli
                     </Typography>
                   </MuiLink>
-                </Container>
-              </Grid>
+                </Grid>
 
-              <Grid item md={6} container justifyContent="center">
-                <Grid item>
-                  <Container>
+                <Grid item md={6} container justifyContent="center">
+                  <Grid item>
                     <Button
                       className={classes.textColor}
                       startIcon={<PhoneAndroidIcon />}
@@ -279,12 +299,10 @@ const Header = () => {
                     >
                       3512530433
                     </Button>
-                  </Container>
+                  </Grid>
                 </Grid>
-              </Grid>
 
-              <Grid item xs={12}>
-                <Container>
+                <Grid item xs={12}>
                   <MenuList className={classes.menu}>
                     <Link
                       offset={-80}
@@ -353,9 +371,9 @@ const Header = () => {
                       </MenuItem>
                     </Link>
                   </MenuList>
-                </Container>
+                </Grid>
               </Grid>
-            </Grid>
+            </Container>
           </Hidden>
         </Toolbar>
       </AppBar>
