@@ -51,20 +51,6 @@ const useStyles = makeStyles((theme) => ({
   arrowIcon: {
     height: "2rem",
     width: "2rem",
-    // borderRadius: "50%",
-    // borderColor: "4px",
-    // backgroundColor: theme.palette.secondary[400],
-    // cursor: "pointer",
-    // position: "fixed",
-    // bottom: "3rem",
-    // left: "85%",
-    // marginBottom: "2rem",
-    // zIndex: "100",
-    // transition: "0.5s ease",
-    // "&:hover": {
-    //   opacity: 0.6,
-    //   transform: "scale(1.2)",
-    // },
   },
   buttonArrowUp: {
     borderRadius: "50%",
@@ -73,6 +59,23 @@ const useStyles = makeStyles((theme) => ({
     left: "85%",
     marginBottom: "2rem",
     zIndex: "100",
+    transition: "0.5s ease",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
+  },
+  linkContainer: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4 ,minmax(0,1fr))",
+    padding: "2rem",
+  },
+  linkContainerSmall: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "1rem",
+  },
+  linkItem: {
     transition: "0.5s ease",
     "&:hover": {
       transform: "scale(1.1)",

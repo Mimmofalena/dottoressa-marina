@@ -14,6 +14,7 @@ import Maps from "../Map/Maps";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import SubHeadingSection from "../SubHeadingSection/SubHeadingSection";
+import LinkUtili from "../LinkUtili/LinkUtili";
 
 const Layout = () => {
   const classes = useStyles();
@@ -38,6 +39,8 @@ const Layout = () => {
           <ScrollToTop />
 
           <Maps />
+
+          <LinkUtili />
         </Route>
       </Switch>
       <Footer />

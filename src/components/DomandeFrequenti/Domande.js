@@ -1,5 +1,15 @@
 const DOMANDE = [
   {
+    title: "Devo prenotare l'appuntamento in studio?",
+    answer: ` Si. Nella situazione di pandemia in cui viviamo e' necessario prenotarsi. Basta chiamare durante gli orari di studio.
+    `,
+  },
+  {
+    title: "Ho dubbi inerente la situazione COVID. Cosa faccio?",
+    answer: ` Si. Nella situazione di pandemia in cui viviamo e' necessario prenotarsi. Basta chiamare durante gli orari di studio.
+    `,
+  },
+  {
     title: "Cosa fare in caso di emergenza?",
     answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
@@ -9,10 +19,7 @@ const DOMANDE = [
   },
   {
     title: "Quanto si paga un certificato?",
-    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+    answer: ` Sana e buona costituzione 35 euro.
 `,
   },
   {
@@ -45,10 +52,7 @@ Riferimenti normativi: Circolare del Ministero della Sanità 11 maggio 1984, n. 
   },
   {
     title: "Quali Vaccinazioni sono disponibili? Come posso prenotarmi?",
-    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+    answer: `Vaccinazioni anti COVID-19 e vaccino anti influenzale. Chiama in studio, invia una mail o contattami via Whatsapp.
 `,
   },
   {
