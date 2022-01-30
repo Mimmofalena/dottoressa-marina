@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/dottoressa-marina/static/css/main.e10db765.chunk.css",
-    "main.js": "/dottoressa-marina/static/js/main.4f5e8031.chunk.js",
-    "main.js.map": "/dottoressa-marina/static/js/main.4f5e8031.chunk.js.map",
+    "main.js": "/dottoressa-marina/static/js/main.baedb20b.chunk.js",
+    "main.js.map": "/dottoressa-marina/static/js/main.baedb20b.chunk.js.map",
     "runtime-main.js": "/dottoressa-marina/static/js/runtime-main.8b4970ee.js",
     "runtime-main.js.map": "/dottoressa-marina/static/js/runtime-main.8b4970ee.js.map",
     "static/css/2.0975cee1.chunk.css": "/dottoressa-marina/static/css/2.0975cee1.chunk.css",
-    "static/js/2.853a6036.chunk.js": "/dottoressa-marina/static/js/2.853a6036.chunk.js",
-    "static/js/2.853a6036.chunk.js.map": "/dottoressa-marina/static/js/2.853a6036.chunk.js.map",
+    "static/js/2.1147858e.chunk.js": "/dottoressa-marina/static/js/2.1147858e.chunk.js",
+    "static/js/2.1147858e.chunk.js.map": "/dottoressa-marina/static/js/2.1147858e.chunk.js.map",
     "static/js/3.27a8b959.chunk.js": "/dottoressa-marina/static/js/3.27a8b959.chunk.js",
     "static/js/3.27a8b959.chunk.js.map": "/dottoressa-marina/static/js/3.27a8b959.chunk.js.map",
     "index.html": "/dottoressa-marina/index.html",
     "static/css/2.0975cee1.chunk.css.map": "/dottoressa-marina/static/css/2.0975cee1.chunk.css.map",
     "static/css/main.e10db765.chunk.css.map": "/dottoressa-marina/static/css/main.e10db765.chunk.css.map",
-    "static/js/2.853a6036.chunk.js.LICENSE.txt": "/dottoressa-marina/static/js/2.853a6036.chunk.js.LICENSE.txt",
+    "static/js/2.1147858e.chunk.js.LICENSE.txt": "/dottoressa-marina/static/js/2.1147858e.chunk.js.LICENSE.txt",
     "static/media/Doctor.db22d731.svg": "/dottoressa-marina/static/media/Doctor.db22d731.svg",
     "static/media/copyright-icon.7bd79998.svg": "/dottoressa-marina/static/media/copyright-icon.7bd79998.svg",
     "static/media/curriculum.ee36dc9d.svg": "/dottoressa-marina/static/media/curriculum.ee36dc9d.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.8b4970ee.js",
     "static/css/2.0975cee1.chunk.css",
-    "static/js/2.853a6036.chunk.js",
+    "static/js/2.1147858e.chunk.js",
     "static/css/main.e10db765.chunk.css",
-    "static/js/main.4f5e8031.chunk.js"
+    "static/js/main.baedb20b.chunk.js"
   ]
 }
