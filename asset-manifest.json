@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dottoressa-marina/static/css/main.e10db765.chunk.css",
-    "main.js": "/dottoressa-marina/static/js/main.f3250042.chunk.js",
-    "main.js.map": "/dottoressa-marina/static/js/main.f3250042.chunk.js.map",
+    "main.js": "/dottoressa-marina/static/js/main.4f5e8031.chunk.js",
+    "main.js.map": "/dottoressa-marina/static/js/main.4f5e8031.chunk.js.map",
     "runtime-main.js": "/dottoressa-marina/static/js/runtime-main.8b4970ee.js",
     "runtime-main.js.map": "/dottoressa-marina/static/js/runtime-main.8b4970ee.js.map",
     "static/css/2.0975cee1.chunk.css": "/dottoressa-marina/static/css/2.0975cee1.chunk.css",
@@ -14,9 +14,9 @@
     "static/css/2.0975cee1.chunk.css.map": "/dottoressa-marina/static/css/2.0975cee1.chunk.css.map",
     "static/css/main.e10db765.chunk.css.map": "/dottoressa-marina/static/css/main.e10db765.chunk.css.map",
     "static/js/2.853a6036.chunk.js.LICENSE.txt": "/dottoressa-marina/static/js/2.853a6036.chunk.js.LICENSE.txt",
+    "static/media/Doctor.db22d731.svg": "/dottoressa-marina/static/media/Doctor.db22d731.svg",
     "static/media/copyright-icon.7bd79998.svg": "/dottoressa-marina/static/media/copyright-icon.7bd79998.svg",
     "static/media/curriculum.ee36dc9d.svg": "/dottoressa-marina/static/media/curriculum.ee36dc9d.svg",
-    "static/media/marina-studio-medico.36971594.jpeg": "/dottoressa-marina/static/media/marina-studio-medico.36971594.jpeg",
     "static/media/syringe-icon.eb57196e.svg": "/dottoressa-marina/static/media/syringe-icon.eb57196e.svg"
   },
   "entrypoints": [
@@ -24,6 +24,6 @@
     "static/css/2.0975cee1.chunk.css",
     "static/js/2.853a6036.chunk.js",
     "static/css/main.e10db765.chunk.css",
-    "static/js/main.f3250042.chunk.js"
+    "static/js/main.4f5e8031.chunk.js"
   ]
 }
