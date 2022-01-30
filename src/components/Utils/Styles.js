@@ -54,9 +54,10 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonArrowUp: {
     borderRadius: "50%",
+    opacity: "0.8",
     position: "fixed",
-    bottom: "3rem",
-    left: "85%",
+    bottom: "2.2rem",
+    left: "50%",
     marginBottom: "2rem",
     zIndex: "100",
     transition: "0.5s ease",
