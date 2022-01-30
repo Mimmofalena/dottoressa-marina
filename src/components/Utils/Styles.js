@@ -32,8 +32,18 @@ const useStyles = makeStyles((theme) => ({
   textColor: {
     color: "#000000",
   },
+  fontSizeMedium: {
+    fontSize: "1.2em",
+  },
+  fontSizeLarge: {
+    fontSize: "1.5em",
+  },
+  largeIcon: {
+    transform: "scale(1.4)",
+  },
   headerTitle: {
     textDecoration: "none",
+    cursor: "default",
   },
   form: {
     minWidth: "100%",

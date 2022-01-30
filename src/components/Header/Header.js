@@ -38,7 +38,7 @@ const Header = () => {
     <>
       <AppBar style={{ backgroundColor: theme.palette.primary[400] }}>
         <Toolbar>
-          {/* /small Screen size  */}
+          {/* ***********************************************Small screen size******************************************   */}
 
           <Hidden smUp>
             <Container>
@@ -58,6 +58,8 @@ const Header = () => {
                       color="textPrimary"
                       align="center"
                       component="h1"
+                      variant="h6"
+                      fontWeight={500}
                     >
                       Dr.ssa Marina Tricoli
                     </Typography>
@@ -80,7 +82,6 @@ const Header = () => {
                     <MoreHorizIcon />
                   </IconButton>
                   <Menu
-                    // PaperProps={{ style: { width: "100%" } }}
                     anchorOrigin={{
                       vertical: "bottom",
                       horizontal: "center",
@@ -146,7 +147,7 @@ const Header = () => {
             </Container>
           </Hidden>
 
-          {/* /medium Screen size  */}
+          {/* ***********************************************Medium screen size******************************************   */}
 
           <Hidden mdUp smDown>
             <Container>
@@ -162,6 +163,7 @@ const Header = () => {
                     to="/"
                   >
                     <Typography
+                      fontWeight={500}
                       className={classes.headerTitle}
                       color="textPrimary"
                       align="center"
@@ -176,7 +178,9 @@ const Header = () => {
 
                 <Grid item>
                   <Button
-                    className={classes.textColor}
+                    className={[classes.textColor, classes.fontSizeMedium].join(
+                      " , "
+                    )}
                     startIcon={<PhoneAndroidIcon />}
                     size="medium"
                     href="tel:+393512530433"
@@ -187,7 +191,9 @@ const Header = () => {
 
                 <Grid item>
                   <Button
-                    className={classes.textColor}
+                    className={[classes.textColor, classes.fontSizeMedium].join(
+                      " , "
+                    )}
                     size="medium"
                     aria-controls="simple-menu"
                     aria-haspopup="true"
@@ -261,48 +267,140 @@ const Header = () => {
             </Container>
           </Hidden>
 
-          {/* /large Screen size  */}
+          {/* ***********************************************large Screen size******************************************     */}
 
           <Hidden mdDown>
-            <Container>
-              <Grid
-                container
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <Grid item md={6}>
-                  <MuiLink
-                    className={classes.headerTitle}
-                    component={RouterLink}
-                    to="/"
+            <Grid container justifyContent="space-between" alignItems="center">
+              <Grid item md={8}>
+                <MuiLink
+                  className={classes.headerTitle}
+                  component={RouterLink}
+                  to="/"
+                >
+                  <Typography
+                    fontWeight={500}
+                    color="textPrimary"
+                    align="center"
+                    component="h1"
+                    variant="h3"
+                    p={3}
                   >
-                    <Typography
-                      color="textPrimary"
-                      align="center"
-                      component="h1"
-                      variant="h4"
-                      p={1}
-                    >
-                      {" "}
-                      Dott.ssa Marina Tricoli
-                    </Typography>
-                  </MuiLink>
-                </Grid>
+                    {" "}
+                    Dott.ssa Marina Tricoli
+                  </Typography>
+                </MuiLink>
+              </Grid>
 
-                <Grid item md={6} container justifyContent="center">
-                  <Grid item>
-                    <Button
-                      className={classes.textColor}
-                      startIcon={<PhoneAndroidIcon />}
-                      size="large"
-                      href="tel:+393512530433"
+              <Grid item md={4} container justifyContent="center">
+                <Button
+                  className={[classes.textColor, classes.fontSizeLarge].join(
+                    " , "
+                  )}
+                  startIcon={
+                    <PhoneAndroidIcon
+                      className={[classes.textColor, classes.largeIcon].join(
+                        " , "
+                      )}
+                    />
+                  }
+                  size="large"
+                  href="tel:+393512530433"
+                >
+                  3512530433
+                </Button>
+              </Grid>
+              <Grid m={1} item xs={12}>
+                <MenuList className={classes.menu}>
+                  <Link
+                    offset={-80}
+                    to="servizi-offerti"
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <MenuItem
+                      className={[
+                        classes.textColor,
+                        classes.fontSizeLarge,
+                        classes.menuItem,
+                      ].join(" , ")}
+                      onClick={handleClose}
                     >
-                      3512530433
-                    </Button>
-                  </Grid>
-                </Grid>
+                      Servizi
+                    </MenuItem>
+                  </Link>
 
-                <Grid item xs={12}>
+                  <Link
+                    offset={-80}
+                    to="curriculum"
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <MenuItem
+                      className={[
+                        classes.textColor,
+                        classes.fontSizeLarge,
+                        classes.menuItem,
+                      ].join(" , ")}
+                      onClick={handleClose}
+                    >
+                      Curriculum
+                    </MenuItem>
+                  </Link>
+                  <Link
+                    offset={-80}
+                    to="domande-frequenti"
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <MenuItem
+                      className={[
+                        classes.textColor,
+                        classes.fontSizeLarge,
+                        classes.menuItem,
+                      ].join(" , ")}
+                      onClick={handleClose}
+                    >
+                      Domande Frequenti
+                    </MenuItem>
+                  </Link>
+                  <Link
+                    offset={-80}
+                    to="contattami"
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <MenuItem
+                      className={[
+                        classes.textColor,
+                        classes.fontSizeLarge,
+                        classes.menuItem,
+                      ].join(" , ")}
+                      onClick={handleClose}
+                    >
+                      Contattami
+                    </MenuItem>
+                  </Link>
+                  <Link
+                    offset={-80}
+                    to="dove-trovarmi"
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <MenuItem
+                      className={[
+                        classes.textColor,
+                        classes.fontSizeLarge,
+                        classes.menuItem,
+                      ].join(" , ")}
+                      onClick={handleClose}
+                    >
+                      Dove trovarmi
+                    </MenuItem>
+                  </Link>
+                </MenuList>
+              </Grid>
+
+              {/* <Grid  item xs={12}>
                   <MenuList className={classes.menu}>
                     <Link
                       offset={-80}
@@ -371,9 +469,8 @@ const Header = () => {
                       </MenuItem>
                     </Link>
                   </MenuList>
-                </Grid>
-              </Grid>
-            </Container>
+                </Grid> */}
+            </Grid>
           </Hidden>
         </Toolbar>
       </AppBar>

@@ -3,7 +3,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  
   Grid,
   useTheme,
   //  Hidden, Link
@@ -17,30 +16,29 @@ import copyrightIcon from "../../assets/copyright-icon.svg";
 
 import useStyles from "../Utils/Styles";
 
-
-
 const Footer = () => {
+  const classes = useStyles();
+  const theme = useTheme();
 
-  const classes = useStyles()
-  const theme = useTheme()
- 
-  
   return (
-    
-    
-    <AppBar style={{backgroundColor:theme.palette.primary[400]}}  position="sticky">
+    <AppBar
+      style={{ backgroundColor: theme.palette.primary[400], marginTop: "4rem" }}
+      position="sticky"
+    >
       <Toolbar>
-        <Grid container justifyContent='center' alignItems='center' spacing={1}>
+        <Grid container justifyContent="center" alignItems="center" spacing={1}>
           <Grid item>
-          <Typography color='textPrimary' variant='h6' component='h5' > Powered by Dom 
- </Typography>
+            <Typography color="textPrimary" variant="h6" component="h5">
+              {" "}
+              Powered by Dom
+            </Typography>
           </Grid>
           <Grid item>
-          <img
-          src={copyrightIcon}
-          alt="a black copyright icon"
-          className={classes.iconSvg}
-        />
+            <img
+              src={copyrightIcon}
+              alt="a black copyright icon"
+              className={classes.iconSvg}
+            />
           </Grid>
         </Grid>
       </Toolbar>
@@ -126,7 +124,6 @@ const Footer = () => {
         </Grid>
       </Toolbar> */}
     </AppBar>
-
   );
 };
 
