@@ -19,7 +19,7 @@ const DomandeFrequenti = () => {
           Domande Frequenti
         </Typography>
 
-        <Typography p={2} align="justify" variant="subtitle1">
+        <Typography p={2} align="justify" variant="h6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
           sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic
           dolorem officiis tempora delectus harum? Reprehenderit illo iure

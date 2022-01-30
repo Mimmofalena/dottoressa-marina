@@ -27,14 +27,9 @@ const Domanda = (props) => {
             },
           }}
         >
-          <ArrowForward
-            className={classes.icon}
-            style={{
-              backgroundColor: "white",
-              height: "180px",
-              marginRight: "1rem",
-            }}
-          />
+          <Box p={1}>
+            <ArrowForward className={classes.icon} />
+          </Box>
 
           <Typography variant="h6" ml={1}>
             {props.title}
@@ -44,7 +39,7 @@ const Domanda = (props) => {
 
       <Grid sx={{ cursor: "default" }} p={2} item xs={12}>
         {displayMore && (
-          <Typography align="justify" variant="body2">
+          <Typography p={1} align="justify">
             {props.answer}
           </Typography>
         )}
