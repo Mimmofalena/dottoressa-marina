@@ -18,7 +18,8 @@ import { Switch, Route } from "react-router";
 import ServiziOfferti from "../ServiziOfferti/ServiziOfferti";
 import ScrollToTop from "./ScrollToTop";
 import Maps from "../Map/Maps";
-import MarinaPic from "../../assets/marina-studio-medico.jpeg";
+// import MarinaPic from "../../assets/marina-studio-medico.jpeg";
+import doctorPicture from "../../assets/Doctor.svg";
 import CssBaseline from "@mui/material/CssBaseline";
 
 const Layout = () => {
@@ -31,34 +32,37 @@ const Layout = () => {
       <Box className={classes.toolbar}></Box>
 
       <Card className={classes.card}>
-        <Grid container spacing={2}>
-          <Grid item md={8}>
+        <Grid container spacing={2} justifySelf="center">
+          <Grid item md={6}>
             <motion.div
               initial={{ opacity: 0, translateX: "-100%" }}
               animate={{ opacity: 1, translateX: 0 }}
               transition={{ duration: 1.5 }}
             >
+              {/* <img src={MarinaPic} alt="" /> */}
               <CardMedia
                 alt="dottoressa sorridente parla al telefono"
                 component="img"
-                src={MarinaPic}
+                src={doctorPicture}
               ></CardMedia>
             </motion.div>
           </Grid>
-          <Grid item md={4}>
+          <Grid item md={6}>
             <CardContent>
-              <Typography variant="h4" textAlign="center" gutterBottom={true}>
-                Dott.ssa Marina Tricoli
-              </Typography>
-              <Typography variant="h5" textAlign="center" gutterBottom={true}>
-                Medico di medicina generale
-              </Typography>
-              <Typography gutterBottom={true}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                optio voluptas dignissimos, enim quae nulla quasi ea saepe.
-                Beatae aspernatur exercitationem a libero consequatur saepe non
-                totam atque facilis deserunt.
-              </Typography>
+              <Box mt={4} p={2}>
+                <Typography variant="h4" textAlign="center" gutterBottom={true}>
+                  Dott.ssa Marina Tricoli
+                </Typography>
+                <Typography variant="h5" textAlign="center" gutterBottom={true}>
+                  Medico di medicina generale
+                </Typography>
+                <Typography gutterBottom={true}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                  optio voluptas dignissimos, enim quae nulla quasi ea saepe.
+                  Beatae aspernatur exercitationem a libero consequatur saepe
+                  non totam atque facilis deserunt.
+                </Typography>
+              </Box>
             </CardContent>
           </Grid>
         </Grid>
