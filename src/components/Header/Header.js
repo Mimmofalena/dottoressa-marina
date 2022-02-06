@@ -67,13 +67,18 @@ const Header = () => {
                 </Grid>
 
                 <Grid item>
-                  <IconButton size="small" href="tel:+393512530433">
+                  <IconButton
+                    className={classes.textColor}
+                    size="small"
+                    href="tel:+393512530433"
+                  >
                     <PhoneAndroidIcon />
                   </IconButton>
                 </Grid>
 
                 <Grid item>
                   <IconButton
+                    className={classes.textColor}
                     size="small"
                     aria-controls="simple-menu"
                     aria-haspopup="true"
