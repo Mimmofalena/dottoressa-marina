@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "1rem",
   },
+
   linkItem: {
     transition: "0.5s ease",
     "&:hover": {

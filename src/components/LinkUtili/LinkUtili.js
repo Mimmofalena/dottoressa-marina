@@ -2,6 +2,7 @@ import React from "react";
 import { List, Typography, Box, Hidden } from "@mui/material";
 import LinkUtiliItem from "./LinkUtiliItem";
 import useStyles from "../Utils/Styles";
+import linkUtiliList from "./LinkUtiliList";
 
 const LinkUtili = () => {
   const classes = useStyles();
@@ -14,7 +15,17 @@ const LinkUtili = () => {
         {/* *********************************** SMALL SCREENS*********************************** */}
         <Hidden mdUp>
           <List className={classes.linkContainerSmall}>
-            <LinkUtiliItem
+            {linkUtiliList.map((item) => {
+              return (
+                <LinkUtiliItem
+                  key={Math.random()}
+                  href={item.href}
+                  linkName={item.linkName}
+                  download={item.download}
+                />
+              );
+            })}
+            {/* <LinkUtiliItem
               href="https://protezionecivile.comune.palermo.it/protezione-civile-covid19-faq.php"
               linkName="Protezione Civile Palermo"
             />
@@ -30,12 +41,27 @@ const LinkUtili = () => {
               href="https://sportello.asppalermo.org/release/index/cambioMedico"
               linkName="Cambio medico online Palermo"
             />
+            <LinkUtiliItem
+              href={isolamentoFlowChart}
+              linkName="Scarica Guida isolamento COVID-19"
+              download
+            /> */}
           </List>
         </Hidden>
         {/* *********************************** LARGESCREENS*********************************** */}
         <Hidden mdDown>
           <List className={classes.linkContainer}>
-            <LinkUtiliItem
+            {linkUtiliList.map((item) => {
+              return (
+                <LinkUtiliItem
+                  key={Math.random()}
+                  href={item.href}
+                  linkName={item.linkName}
+                  download={item.download}
+                />
+              );
+            })}
+            {/* <LinkUtiliItem
               href="https://protezionecivile.comune.palermo.it/protezione-civile-covid19-faq.php"
               linkName="Protezione Civile Palermo"
             />
@@ -51,6 +77,11 @@ const LinkUtili = () => {
               href="https://sportello.asppalermo.org/release/index/cambioMedico"
               linkName="Cambio medico online Palermo"
             />
+            <LinkUtiliItem
+              href={isolamentoFlowChart}
+              linkName="Scarica Guida isolamento COVID-19"
+              download
+            /> */}
           </List>
         </Hidden>
       </Box>

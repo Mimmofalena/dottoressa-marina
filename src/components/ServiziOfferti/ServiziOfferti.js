@@ -56,30 +56,28 @@ const ServiziOfferti = () => {
                   typography={"Visite Domiciliari"}
                 />
               </Grid>
+
               <Grid xs={12} item>
                 <Servizio
                   icon={<ImportContactsIcon className={classes.icon} />}
                   typography={"Cartella Computerizzata"}
                 />
               </Grid>
-              <Grid xs={12} item>
-                <Servizio
-                  icon={<ImportContactsIcon className={classes.icon} />}
-                  typography={"Cartella Computerizzata"}
-                />
-              </Grid>
+
               <Grid xs={12} item>
                 <Servizio
                   icon={<LocalHospitalIcon className={classes.icon} />}
                   typography={"Visite"}
                 />
               </Grid>
+
               <Grid xs={12} item>
                 <Servizio
                   icon={<NoteIcon className={classes.icon} />}
                   typography={"Certificati"}
                 />
               </Grid>
+
               <Grid xs={12} item>
                 <Servizio
                   icon={

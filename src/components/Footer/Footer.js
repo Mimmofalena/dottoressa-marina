@@ -5,6 +5,7 @@ import {
   Typography,
   Grid,
   useTheme,
+  Link,
   //  Hidden, Link
 } from "@mui/material";
 // import {Link as Scroll} from 'react-scroll'
@@ -28,10 +29,14 @@ const Footer = () => {
       <Toolbar>
         <Grid container justifyContent="center" alignItems="center" spacing={1}>
           <Grid item>
-            <Typography color="textPrimary" variant="h6" component="h5">
-              {" "}
-              Powered by Dom
-            </Typography>
+            <Link
+              underline="none"
+              href="https://mimmofalena.github.io/domenico-portfolio/"
+            >
+              <Typography color="textPrimary" variant="h6" component="h5">
+                Powered by Domenico Cucinotta
+              </Typography>
+            </Link>
           </Grid>
           <Grid item>
             <img

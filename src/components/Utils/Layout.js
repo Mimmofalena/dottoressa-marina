@@ -1,20 +1,18 @@
 import React from "react";
-import { Box } from "@mui/material";
-import DomandeFrequenti from "../DomandeFrequenti/DomandeFrequenti";
 import Footer from "../Footer/Footer";
 import Contacts from "../Contacts/Contacts";
 import Curriculum from "../Curriculum/Curriculum";
-import Header from "../Header/Header";
-import useStyles from "./Styles";
-import { Switch, Route } from "react-router";
 import ServiziOfferti from "../ServiziOfferti/ServiziOfferti";
 import ScrollToTop from "./ScrollToTop";
 import Maps from "../Map/Maps";
-// import MarinaPic from "../../assets/marina-studio-medico.jpeg";
-
-import CssBaseline from "@mui/material/CssBaseline";
-import SubHeadingSection from "../SubHeadingSection/SubHeadingSection";
+import DomandeFrequenti from "../DomandeFrequenti/DomandeFrequenti";
+import Header from "../Header/Header";
 import LinkUtili from "../LinkUtili/LinkUtili";
+import useStyles from "./Styles";
+import { Switch, Route } from "react-router";
+import { Box } from "@mui/material";
+import SubHeadingSection from "../SubHeadingSection/SubHeadingSection";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const Layout = () => {
   const classes = useStyles();

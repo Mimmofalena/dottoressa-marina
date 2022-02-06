@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Link, List, ListItem, Typography } from "@mui/material";
+import { Box, Link, ListItem, Typography } from "@mui/material";
 import useStyles from "../Utils/Styles";
 
 const LinkUtiliItem = (props) => {
@@ -12,6 +12,7 @@ const LinkUtiliItem = (props) => {
           underline="none"
           color="inherit"
           href={props.href}
+          download={props.download}
         >
           <Typography align="center" variant="h5">
             {props.linkName}

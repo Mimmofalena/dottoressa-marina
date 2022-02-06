@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Typography,
-  CardContent,
-  Card,
-  Box,
-  Icon,
-  SvgIcon,
-  Grid,
-} from "@mui/material";
+import { Typography, CardContent, Card, Box, Grid } from "@mui/material";
 import curriculumSVG from "../../assets/curriculum.svg";
 import useStyles from "../Utils/Styles";
 
