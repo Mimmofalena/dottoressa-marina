@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dottoressa-marina/static/css/main.e10db765.chunk.css",
-    "main.js": "/dottoressa-marina/static/js/main.5725483c.chunk.js",
-    "main.js.map": "/dottoressa-marina/static/js/main.5725483c.chunk.js.map",
+    "main.js": "/dottoressa-marina/static/js/main.a032d11c.chunk.js",
+    "main.js.map": "/dottoressa-marina/static/js/main.a032d11c.chunk.js.map",
     "runtime-main.js": "/dottoressa-marina/static/js/runtime-main.51b39671.js",
     "runtime-main.js.map": "/dottoressa-marina/static/js/runtime-main.51b39671.js.map",
     "static/css/2.0975cee1.chunk.css": "/dottoressa-marina/static/css/2.0975cee1.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.0975cee1.chunk.css",
     "static/js/2.1e8eb2d6.chunk.js",
     "static/css/main.e10db765.chunk.css",
-    "static/js/main.5725483c.chunk.js"
+    "static/js/main.a032d11c.chunk.js"
   ]
 }
