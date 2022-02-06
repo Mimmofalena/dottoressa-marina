@@ -11,11 +11,7 @@ const DOMANDE = [
   },
   {
     title: "Cosa fare in caso di emergenza?",
-    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-    `,
+    answer: ` In situazioni di emergenza si ricorda la possibilità di chiamare il 118 che invierà un’ambulanza per il trasporto al pronto soccorso. Alcuni esempi possono essere crisi respiratorie o dolore toracico`,
   },
   {
     title: "Quanto si paga un certificato?",
@@ -52,23 +48,22 @@ Riferimenti normativi: Circolare del Ministero della Sanità 11 maggio 1984, n. 
   },
   {
     title: "Quali Vaccinazioni sono disponibili? Come posso prenotarmi?",
-    answer: `Vaccinazioni anti COVID-19 e vaccino anti influenzale. Chiama in studio, invia una mail o contattami via Whatsapp.
+    answer: `Eseguo sia vaccinazioni COVID-19 e vaccino anti influenzale. Per effettuare i vaccini bisogna prenotarsi al fine di 
+    evitare sprechi. Chiama in studio, invia una mail o contattami via Whatsapp.
 `,
   },
   {
     title: "Quando posso richiedere una visita domiciliare?",
-    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-`,
-  },
-  {
-    title: "Come posso usare le Esenzioni?",
-    answer: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi debitis maxime! Minima praesentium itaque eligendi aliquam, hic dolorem officiis tempora delectus harum? Reprehenderit illo iure tempore sunt voluptates soluta?
+    answer: `Le visite a domicilio vanno sempre richieste al medico e non alla segretaria. Vengono effettuate
+ai pazienti non trasportabili o che stanno troppo male per venire in studio
+ai pazienti in assistenza domiciliare programmata (ADP) o integrata (ADI)
+ai pazienti che non possono superare le barriere architettoniche dello studio. 
+Le visite domiciliari debbono essere richieste entro le ore 10 del mattino, altrimenti possono essere fatte il giorno successivo.
+
+Le visite urgenti (a giudizio del medico) sono effettuate nel più breve tempo possibile dopo il recepimento della chiamata.
+
+Si raccomanda di richiedere visite domiciliari solo se strettamente necessario: il tempo per effettuare una visita domiciliare è quello impiegato per visitare 3-4 pazienti in studio, quindi le visite a domicilio sono molto onerose per il medico, che ha anche diversi pazienti non trasportabili, invalidi o con gravi problemi di salute, 
+da controllare periodicamente in modo programmato. 
 `,
   },
 ];

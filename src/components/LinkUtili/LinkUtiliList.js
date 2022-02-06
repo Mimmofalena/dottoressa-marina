@@ -17,6 +17,10 @@ const linkUtiliList = [
     href: "https://sportello.asppalermo.org/release/index/cambioMedico",
   },
   {
+    linkName: "Farmacie di turno Palermo",
+    href: "https://www.ordinefarmacistipalermo.it/default.asp?pg=turnidiurni",
+  },
+  {
     linkName: "Scarica Guida isolamento COVID-19",
     href: isolamentoFlowChart,
     download: isolamentoFlowChart,

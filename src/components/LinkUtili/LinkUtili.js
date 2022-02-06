@@ -3,6 +3,7 @@ import { List, Typography, Box, Hidden } from "@mui/material";
 import LinkUtiliItem from "./LinkUtiliItem";
 import useStyles from "../Utils/Styles";
 import linkUtiliList from "./LinkUtiliList";
+import { v4 as uuidv4 } from "uuid";
 
 const LinkUtili = () => {
   const classes = useStyles();
@@ -18,7 +19,7 @@ const LinkUtili = () => {
             {linkUtiliList.map((item) => {
               return (
                 <LinkUtiliItem
-                  key={Math.random()}
+                  key={uuidv4()}
                   href={item.href}
                   linkName={item.linkName}
                   download={item.download}

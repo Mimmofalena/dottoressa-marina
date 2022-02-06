@@ -87,17 +87,7 @@ const Maps = () => {
         <Container>
           <Box mt={4}>
             <Typography gutterBottom variant="h6" align="center">
-              Indirizzo: Via Emilia 34, Palermo
-            </Typography>
-          </Box>
-          <Box mt={4}>
-            <Typography gutterBottom variant="h6" align="center">
-              <strong>Orari:</strong>
-              <br /> Lun/Mer/Giov: 15.15 - 17.15
-              <br />
-              Martedi': 09.30 - 11.30
-              <br />
-              Venerdi:11.00 - 13.00
+              Indirizzo: Via Emilia 34, Palermo 90144
             </Typography>
           </Box>
         </Container>

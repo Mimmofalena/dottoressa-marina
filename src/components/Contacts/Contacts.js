@@ -16,6 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 
 import emailjs from "emailjs-com";
+import OrariStudio from "./OrariStudio";
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
@@ -67,14 +68,39 @@ const Contacts = () => {
         <Grid container direction="column" alignContent="center">
           <Box mb={2}>
             <Typography style={{ textAlign: "center" }} variant="h4">
-              Contattami
+              Orari Studio per appuntamento
+            </Typography>
+          </Box>
+
+          <OrariStudio />
+
+          <Box mb={2}>
+            <Typography
+              gutterBottom
+              style={{ textAlign: "center" }}
+              variant="h4"
+            >
+              Contatti
+            </Typography>
+            <Typography gutterBottom align="center" variant="h5">
+              Fisso: 091-520120
+            </Typography>
+            <Typography gutterBottom align="center" variant="h5">
+              Cel: 351-2530433
+            </Typography>
+            <Typography gutterBottom align="center" variant="h5">
+              Mail: tricolidoc@gmail.com
+            </Typography>
+          </Box>
+
+          <Box mb={2}>
+            <Typography style={{ textAlign: "center" }} variant="h4">
+              Invia una mail
             </Typography>
           </Box>
 
           <Formik
             onSubmit={(values, actions) => {
-              console.log(actions);
-
               sendEmailHandler(values);
               actions.setSubmitting(false);
               actions.resetForm();
@@ -168,36 +194,12 @@ const Contacts = () => {
           </Formik>
         </Grid>
       </CardContent>
+      <Typography align="center" mt={1}>
+        Causa alto volume di mails, esse verranno elaborate entro 24-48h durante
+        gli orari lavorativi.
+      </Typography>
     </Card>
   );
 };
 
 export default Contacts;
-
-// <ButtonGroup >
-
-//        <Button  color='primary' variant="contained" href="tel:+39091520120"
-
-//       startIcon={<PhoneAndroidIcon color='secondary' /> } ><Typography variant='button' color='textSecondary'>Chiama 091520120</Typography>
-
-//       </Button>
-
-//  <Button size='small' color='primary' variant='contained'>
-
-//         <IconButton >
-//         <PhoneAndroidIcon/>
-//         <Typography variant='button' color='textSecondary'>Chiama 091520120</Typography>
-//         </IconButton>
-// </Button>
-// <Button color='primary' variant='contained'>
-
-//         <IconButton >
-//         <PhoneAndroidIcon/>
-//         <Typography variant='button' color='textSecondary'>Chiama 091520120</Typography>
-//         </IconButton>
-// </Button>
-
-//         <Button color='primary' variant="contained" href="tel:+393512530433"
-
-//       startIcon={< PhoneAndroidIcon/> } >Chiama 3512530433</Button>
-//        </ButtonGroup>
