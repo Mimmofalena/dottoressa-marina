@@ -1,29 +1,30 @@
 {
   "files": {
     "main.css": "/dottoressa-marina/static/css/main.e10db765.chunk.css",
-    "main.js": "/dottoressa-marina/static/js/main.092f88f8.chunk.js",
-    "main.js.map": "/dottoressa-marina/static/js/main.092f88f8.chunk.js.map",
-    "runtime-main.js": "/dottoressa-marina/static/js/runtime-main.c78c121a.js",
-    "runtime-main.js.map": "/dottoressa-marina/static/js/runtime-main.c78c121a.js.map",
+    "main.js": "/dottoressa-marina/static/js/main.5725483c.chunk.js",
+    "main.js.map": "/dottoressa-marina/static/js/main.5725483c.chunk.js.map",
+    "runtime-main.js": "/dottoressa-marina/static/js/runtime-main.51b39671.js",
+    "runtime-main.js.map": "/dottoressa-marina/static/js/runtime-main.51b39671.js.map",
     "static/css/2.0975cee1.chunk.css": "/dottoressa-marina/static/css/2.0975cee1.chunk.css",
-    "static/js/2.9bdad471.chunk.js": "/dottoressa-marina/static/js/2.9bdad471.chunk.js",
-    "static/js/2.9bdad471.chunk.js.map": "/dottoressa-marina/static/js/2.9bdad471.chunk.js.map",
-    "static/js/3.56581108.chunk.js": "/dottoressa-marina/static/js/3.56581108.chunk.js",
-    "static/js/3.56581108.chunk.js.map": "/dottoressa-marina/static/js/3.56581108.chunk.js.map",
+    "static/js/2.1e8eb2d6.chunk.js": "/dottoressa-marina/static/js/2.1e8eb2d6.chunk.js",
+    "static/js/2.1e8eb2d6.chunk.js.map": "/dottoressa-marina/static/js/2.1e8eb2d6.chunk.js.map",
+    "static/js/3.1e24c7ed.chunk.js": "/dottoressa-marina/static/js/3.1e24c7ed.chunk.js",
+    "static/js/3.1e24c7ed.chunk.js.map": "/dottoressa-marina/static/js/3.1e24c7ed.chunk.js.map",
     "index.html": "/dottoressa-marina/index.html",
     "static/css/2.0975cee1.chunk.css.map": "/dottoressa-marina/static/css/2.0975cee1.chunk.css.map",
     "static/css/main.e10db765.chunk.css.map": "/dottoressa-marina/static/css/main.e10db765.chunk.css.map",
-    "static/js/2.9bdad471.chunk.js.LICENSE.txt": "/dottoressa-marina/static/js/2.9bdad471.chunk.js.LICENSE.txt",
+    "static/js/2.1e8eb2d6.chunk.js.LICENSE.txt": "/dottoressa-marina/static/js/2.1e8eb2d6.chunk.js.LICENSE.txt",
     "static/media/Doctor.db22d731.svg": "/dottoressa-marina/static/media/Doctor.db22d731.svg",
     "static/media/copyright-icon.7bd79998.svg": "/dottoressa-marina/static/media/copyright-icon.7bd79998.svg",
     "static/media/curriculum.ee36dc9d.svg": "/dottoressa-marina/static/media/curriculum.ee36dc9d.svg",
+    "static/media/isolamento-flowchart.d309926b.jpeg": "/dottoressa-marina/static/media/isolamento-flowchart.d309926b.jpeg",
     "static/media/syringe-icon.eb57196e.svg": "/dottoressa-marina/static/media/syringe-icon.eb57196e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c78c121a.js",
+    "static/js/runtime-main.51b39671.js",
     "static/css/2.0975cee1.chunk.css",
-    "static/js/2.9bdad471.chunk.js",
+    "static/js/2.1e8eb2d6.chunk.js",
     "static/css/main.e10db765.chunk.css",
-    "static/js/main.092f88f8.chunk.js"
+    "static/js/main.5725483c.chunk.js"
   ]
 }
