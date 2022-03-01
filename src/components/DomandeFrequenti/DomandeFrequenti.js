@@ -29,7 +29,13 @@ const DomandeFrequenti = () => {
 
           {DOMANDE.map((dom) => {
             return (
-              <Domanda key={dom.title} title={dom.title} answer={dom.answer} />
+              <Domanda
+                key={dom.title}
+                title={dom.title}
+                answer={dom.answer}
+                src={dom.src}
+                alt={dom.alt}
+              />
             );
           })}
         </CardContent>

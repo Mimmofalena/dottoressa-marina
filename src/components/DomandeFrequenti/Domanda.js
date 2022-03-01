@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box, Paper } from "@mui/material";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import useStyles from "../Utils/Styles";
 import { useTheme } from "@mui/styles";
@@ -39,9 +39,18 @@ const Domanda = (props) => {
 
       <Grid sx={{ cursor: "default" }} p={2} item xs={12}>
         {displayMore && (
-          <Typography p={1} align="justify">
-            {props.answer}
-          </Typography>
+          <Box>
+            <Typography
+              p={1}
+              align="justify"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {props.answer}
+            </Typography>
+            <Box display="flex" justifyContent="center" p={1}>
+              <img src={props.src} alt={props.alt} />
+            </Box>
+          </Box>
         )}
       </Grid>
     </Grid>
