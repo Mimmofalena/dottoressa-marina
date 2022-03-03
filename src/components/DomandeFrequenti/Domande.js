@@ -13,7 +13,7 @@ const DOMANDE = [
   },
 
   {
-    title: "Ho dubbi inerente la situazione COVID. Cosa faccio?",
+    title: "Ho dubbi inerente l'isolamento da COVID. Cosa faccio?",
     src: flowChartCovid,
     alt: "FIMMG covid flow chart",
   },

@@ -38,17 +38,17 @@ const SubHeadingSection = () => {
                 animate={{ opacity: 1, translateX: 0 }}
                 transition={{ duration: 1.5 }}
               >
-                <Typography variant="h4" textAlign="center" gutterBottom={true}>
+                <Typography variant="h4" textAlign="center" gutterBottom>
                   Dott.ssa Marina Tricoli
                 </Typography>
-                <Typography variant="h5" textAlign="center" gutterBottom={true}>
+                <Typography variant="h5" textAlign="center" gutterBottom>
                   Medico di medicina generale
                 </Typography>
-                <Typography gutterBottom={true}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                  optio voluptas dignissimos, enim quae nulla quasi ea saepe.
-                  Beatae aspernatur exercitationem a libero consequatur saepe
-                  non totam atque facilis deserunt.
+                <Typography gutterBottom>
+                  Benvenuto/a nel mio studio online! <br />
+                  Potrai trovare informazioni sul mio studio e links utili
+                  riguardo salute, cambio medico, covid e altro. Potrai
+                  consultare i miei orari di studio e come contattarmi.
                 </Typography>
               </motion.div>
             </Box>

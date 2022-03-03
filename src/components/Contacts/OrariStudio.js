@@ -77,22 +77,12 @@ const OrariStudio = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <Typography align="center" mt={1}>
+      <Typography p={1} mt={1}>
         Lo studio è aperto negli orari su indicati e solo su &nbsp;
         <strong>appuntamento</strong>. Variazioni Vi verranno comunicate tramite
         broadcast whatsapp.
       </Typography>
     </Box>
-    // <Box mt={4}>
-    //   <Typography gutterBottom variant="h6" align="center">
-    //     <strong>Orari:</strong>
-    //     <br /> Lun/Mer/Giov: 15.15 - 17.15
-    //     <br />
-    //     Martedi': 09.30 - 11.30
-    //     <br />
-    //     Venerdi:11.00 - 13.00
-    //   </Typography>
-    // </Box>
   );
 };
 

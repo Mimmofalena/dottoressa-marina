@@ -49,7 +49,7 @@ const Maps = () => {
       square
       className={classes.card}
       id="dove-trovarmi"
-      style={{ backgroundColor: theme.palette.primary[400] }}
+      style={{ backgroundColor: theme.palette.primary[200] }}
     >
       <CardContent>
         <Box p={2}>

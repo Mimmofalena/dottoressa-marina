@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar style={{ backgroundColor: theme.palette.primary[400] }}>
+      <AppBar style={{ backgroundColor: theme.palette.primary[300] }}>
         <Toolbar>
           {/* ***********************************************Small screen size******************************************   */}
 
@@ -285,9 +285,9 @@ const Header = () => {
                   <Typography
                     fontWeight={500}
                     color="textPrimary"
-                    align="center"
+                    align="left"
                     component="h1"
-                    variant="h3"
+                    variant="h4"
                     p={3}
                   >
                     {" "}

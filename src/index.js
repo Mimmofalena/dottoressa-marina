@@ -17,6 +17,7 @@ const theme = createTheme(
     palette: {
       primary: teal,
       secondary: orange,
+      tertiary: "rgb(244,244,244)",
     },
   })
 );

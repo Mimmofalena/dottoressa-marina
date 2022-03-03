@@ -19,9 +19,10 @@ const Domanda = (props) => {
         <Box
           sx={{
             display: "flex",
+            borderRadius: "5px",
             width: "100%",
             alignItems: "center",
-            backgroundColor: theme.palette.primary[200],
+            backgroundColor: theme.palette.primary[100],
             "&:hover": {
               opacity: 0.5,
             },

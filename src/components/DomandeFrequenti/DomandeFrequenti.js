@@ -1,30 +1,33 @@
 import React from "react";
-import { useTheme, Typography, CardContent, Card } from "@mui/material";
+import {
+  useTheme,
+  Typography,
+  CardContent,
+  Card,
+  Box,
+  Link,
+} from "@mui/material";
 import Domanda from "./Domanda";
 import DOMANDE from "./Domande";
 import useStyles from "../Utils/Styles";
+import { borderTop } from "@mui/system";
 
 const DomandeFrequenti = () => {
   const theme = useTheme();
   const classes = useStyles();
   return (
-    <>
-      <Card
-        square
-        className={classes.card}
-        id="domande-frequenti"
-        style={{ backgroundColor: theme.palette.primary[400] }}
-      >
-        <CardContent>
+    <Card square className={classes.card} id="domande-frequenti">
+      <CardContent style={{ backgroundColor: theme.palette.tertiary }}>
+        <Box p={1}>
           <Typography align="center" variant="h4">
             Domande Frequenti
           </Typography>
 
           <Typography p={2} align="justify" variant="h6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            sequi debitis maxime! Minima praesentium itaque eligendi aliquam,
-            hic dolorem officiis tempora delectus harum? Reprehenderit illo iure
-            tempore sunt voluptates soluta?
+            Qui di seguito vi sono riportate le domande più frequenti. Se pensi
+            vi sia altro da aggiungere non esitare a farmelo sapere, critiche
+            costruttive sono sempre ben accette. Basta inviare una mail
+            <Link href="mailto:tricolidoc@gmail.com">tricolidoc@gmail.com</Link>
           </Typography>
 
           {DOMANDE.map((dom) => {
@@ -38,35 +41,9 @@ const DomandeFrequenti = () => {
               />
             );
           })}
-        </CardContent>
-        <Card>
-          {/* <CardMedia component="img" image={isolamentoFlowChart} /> */}
-        </Card>
-      </Card>
-      {/* <CardMedia>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ height: "500px" }}>
-            <img
-              onClick={zoomHandler}
-              className={
-                isZoom
-                  ? [classes.imageMedia, classes.zoom].join(" , ")
-                  : classes.imageMedia
-              }
-              src={isolamentoFlowChart}
-              alt="isolamento covid flow chart"
-            />
-          </div>
-        </div>
-      </CardMedia> */}
-    </>
+        </Box>
+      </CardContent>
+    </Card>
   );
 };
 
