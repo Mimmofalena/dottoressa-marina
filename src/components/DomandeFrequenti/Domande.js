@@ -14,6 +14,7 @@ const DOMANDE = [
 
   {
     title: "Ho dubbi inerente l'isolamento da COVID. Cosa faccio?",
+    answer: `Le normative COVID sono in continua evoluzione. Di seguito il flow chart della Federazione Italiana Medici di Medicina Generale spiega il processo di isolamento.`,
     src: flowChartCovid,
     alt: "FIMMG covid flow chart",
   },

@@ -23,15 +23,12 @@ const Curriculum = () => {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <Typography p={2} align="justify" variant="subtitle1" gutterBottom>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Cupiditate laborum ab quod cum similique aspernatur odit debitis
-              non laudantium. Tenetur fuga facere expedita autem asperiores
-              doloribus commodi, iure sapiente cum. Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Debitis consectetur rerum mollitia
-              perferendis, esse laborum vero? Mollitia enim explicabo et maiores
-              dicta molestiae id fuga, ducimus dignissimos! Corrupti, quidem
-              dolores.
+            <Typography p={2} align="justify" gutterBottom>
+              Laureata all'Università di Palermo a pieni voti nel 2013. Titolare
+              di medico di guardia. Pratico agopuntura come adiuvante alle
+              terapie mediche tradizionali quando necessario. Ho conseguito un
+              master di nutrizione di secondo livello a pieni voti presso
+              l'Università di Napoli.
             </Typography>
           </Grid>
         </Grid>

@@ -1,4 +1,5 @@
 import React from "react";
+import Menus from "./Menu";
 import {
   AppBar,
   Toolbar,
@@ -75,8 +76,9 @@ const Header = () => {
                     <PhoneAndroidIcon />
                   </IconButton>
                 </Grid>
+                <Menus />
 
-                <Grid item>
+                {/* <Grid item>
                   <IconButton
                     className={classes.textColor}
                     size="small"
@@ -147,7 +149,7 @@ const Header = () => {
                       <MenuItem onClick={handleClose}>Dove trovarmi</MenuItem>
                     </Link>
                   </Menu>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Container>
           </Hidden>

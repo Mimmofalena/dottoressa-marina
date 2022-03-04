@@ -23,7 +23,7 @@ const DomandeFrequenti = () => {
             Domande Frequenti
           </Typography>
 
-          <Typography p={2} align="justify" variant="h6">
+          <Typography p={2} align="justify">
             Qui di seguito vi sono riportate le domande più frequenti. Se pensi
             vi sia altro da aggiungere non esitare a farmelo sapere, critiche
             costruttive sono sempre ben accette. Basta inviare una mail

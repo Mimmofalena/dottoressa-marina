@@ -1,0 +1,31 @@
+.backGround {
+  background-color: rgba(89, 100, 96, 0);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  min-width: 50%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  /* pointer-events: none; */
+}
+
+.containerList {
+  background-color: #26a699ed;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  min-width: 50%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* pointer-events: none; */
+}
+
+.listItem {
+  list-style: none;
+  padding: 1rem;
+  text-align: right;
+}

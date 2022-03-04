@@ -39,13 +39,8 @@ const ServiziOfferti = () => {
               Servizi Offerti
             </Typography>
             <Typography gutterBottom>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
-              magnam quis, aut quaerat exercitationem quasi natus. Ipsam beatae
-              dignissimos culpa a reiciendis vero eius dolore, excepturi qui,
-              hic in doloremque?Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Fugit consectetur vitae nostrum repudiandae
-              error aut nisi dolores labore ea, natus possimus in sed ullam
-              animi unde voluptatem omnis ratione libero?
+              Di seguito sono riportati i servizi piu' comuni che offro ai miei
+              assistiti.
             </Typography>
           </Grid>
 

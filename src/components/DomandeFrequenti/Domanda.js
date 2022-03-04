@@ -3,6 +3,7 @@ import { Grid, Typography, Box, Paper } from "@mui/material";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import useStyles from "../Utils/Styles";
 import { useTheme } from "@mui/styles";
+import Magnifier from "react-magnifier";
 
 const Domanda = (props) => {
   const theme = useTheme();
@@ -45,12 +46,15 @@ const Domanda = (props) => {
               p={1}
               align="justify"
               style={{ whiteSpace: "pre-line" }}
+              gutterBottom
             >
               {props.answer}
             </Typography>
-            <Box display="flex" justifyContent="center" p={1}>
-              <img src={props.src} alt={props.alt} />
-            </Box>
+            {props.src && (
+              <Box display="flex" justifyContent="center" p={1}>
+                <Magnifier src={props.src} width={500} />
+              </Box>
+            )}
           </Box>
         )}
       </Grid>
