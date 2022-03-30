@@ -13,6 +13,7 @@ import { Switch, Route } from "react-router";
 import { Box } from "@mui/material";
 import SubHeadingSection from "../SubHeadingSection/SubHeadingSection";
 import CssBaseline from "@mui/material/CssBaseline";
+import OrariStudio from "../Contacts/OrariStudio";
 
 const Layout = () => {
   const classes = useStyles();
@@ -33,6 +34,8 @@ const Layout = () => {
           <DomandeFrequenti />
 
           <Contacts />
+
+          <OrariStudio />
 
           <ScrollToTop />
 

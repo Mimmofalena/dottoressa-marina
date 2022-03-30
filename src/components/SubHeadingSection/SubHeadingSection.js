@@ -14,7 +14,7 @@ import doctorPicture from "../../assets/Doctor.svg";
 const SubHeadingSection = () => {
   const classes = useStyles();
   return (
-    <Card className={classes.card}>
+    <Card id="home" className={classes.card}>
       <Grid container spacing={2} justifySelf="center">
         <Grid item md={6}>
           <motion.div

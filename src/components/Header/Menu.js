@@ -17,6 +17,33 @@ import useStyles from "../Utils/Styles";
 import { Link } from "react-scroll";
 import style from "./Menu.module.css";
 
+const menuList = [
+  {
+    name: "Servizi Offerti",
+    to: "servizi-offerti",
+  },
+  {
+    name: "Curriculum",
+    to: "curriculum",
+  },
+  {
+    name: "Domande Frequenti",
+    to: "domande-frequenti",
+  },
+  {
+    name: "Dove trovarmi",
+    to: "dove-trovarmi",
+  },
+  {
+    name: "Orari",
+    to: "orari-studio",
+  },
+  {
+    name: "Contattami",
+    to: "contattami",
+  },
+];
+
 const Menus = () => {
   const classes = useStyles();
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -44,7 +71,22 @@ const Menus = () => {
             <li onClick={showSidebar} className={style.listItem}>
               X
             </li>
-            <li className={style.listItem}>
+            {menuList.map((item) => {
+              return (
+                <li className={style.listItem}>
+                  <Link
+                    onClick={showSidebar}
+                    offset={-80}
+                    to={item.to}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
+            {/* <li className={style.listItem}>
               <Link
                 onClick={showSidebar}
                 offset={-80}
@@ -54,7 +96,7 @@ const Menus = () => {
               >
                 Servizi Offerti
               </Link>
-            </li>
+            </li> */}
             {/* <li>
             <Link
             onClick={showSidebar}

@@ -52,11 +52,11 @@ const Maps = () => {
       style={{ backgroundColor: theme.palette.primary[200] }}
     >
       <CardContent>
-        <Box p={2}>
+        {/* <Box p={2}>
           <Typography gutterBottom variant="h4" align="center">
             Dove trovarmi
           </Typography>
-        </Box>
+        </Box> */}
 
         <GoogleMap
           mapContainerStyle={mapContainerStyle}

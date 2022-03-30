@@ -102,28 +102,13 @@ const Contacts = () => {
           </Grid>
 
           <Box p={1} mb={1}>
-            <Typography textAlign="center" variant="h4" gutterBottom>
-              Orari Studio per appuntamento
+            <Typography p={1} gutterBottom variant="h5">
+              <Link href="tel:+39091-520120">Studio: 091-520120</Link>
             </Typography>
-          </Box>
-
-          <OrariStudio />
-
-          <Box p={1} mb={1}>
-            <Typography
-              gutterBottom
-              style={{ textAlign: "center" }}
-              variant="h4"
-            >
-              Contatti
-            </Typography>
-            <Typography p={1} gutterBottom align="center" variant="h5">
-              <Link href="tel:+39091-520120">091-520120</Link>
-            </Typography>
-            <Typography p={1} gutterBottom align="center" variant="h5">
+            <Typography p={1} gutterBottom variant="h5">
               <Link href="tel:+39091-520120">Cel: 351-2530433</Link>
             </Typography>
-            <Typography p={1} gutterBottom align="center" variant="h5">
+            <Typography p={1} gutterBottom variant="h5">
               <Link href="mailto: tricolidoc@gmail.com">
                 Mail: tricolidoc@gmail.com
               </Link>

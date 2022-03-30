@@ -49,22 +49,24 @@ const Header = () => {
                 alignItems="center"
               >
                 <Grid item>
-                  <MuiLink
-                    className={classes.headerTitle}
-                    component={RouterLink}
-                    to="/"
+                  <Typography
+                    color="textPrimary"
+                    align="center"
+                    component="h1"
+                    variant="h6"
+                    fontWeight={500}
                   >
-                    <Typography
+                    <Link
+                      offset={-80}
+                      smooth={true}
+                      duration={1000}
                       className={classes.headerTitle}
-                      color="textPrimary"
-                      align="center"
-                      component="h1"
-                      variant="h6"
-                      fontWeight={500}
+                      component={RouterLink}
+                      to="home"
                     >
                       Dr.ssa Marina Tricoli
-                    </Typography>
-                  </MuiLink>
+                    </Link>
+                  </Typography>
                 </Grid>
 
                 <Grid item>
@@ -164,23 +166,25 @@ const Header = () => {
                 alignItems="center"
               >
                 <Grid item>
-                  <MuiLink
-                    className={classes.headerTitle}
-                    component={RouterLink}
-                    to="/"
+                  <Typography
+                    fontWeight={500}
+                    color="textPrimary"
+                    align="center"
+                    component="h1"
+                    variant="h5"
                   >
-                    <Typography
-                      fontWeight={500}
+                    <Link
+                      offset={-80}
+                      smooth={true}
+                      duration={1000}
+                      component={RouterLink}
+                      to="home"
                       className={classes.headerTitle}
-                      color="textPrimary"
-                      align="center"
-                      component="h1"
-                      variant="h5"
                     >
                       {" "}
                       Dott.ssa Marina Tricoli
-                    </Typography>
-                  </MuiLink>
+                    </Link>
+                  </Typography>
                 </Grid>
 
                 <Grid item>
@@ -279,23 +283,26 @@ const Header = () => {
           <Hidden mdDown>
             <Grid container justifyContent="space-between" alignItems="center">
               <Grid item md={8}>
-                <MuiLink
-                  className={classes.headerTitle}
-                  component={RouterLink}
-                  to="/"
+                <Typography
+                  fontWeight={500}
+                  color="textPrimary"
+                  align="left"
+                  component="h1"
+                  variant="h4"
+                  p={3}
                 >
-                  <Typography
-                    fontWeight={500}
-                    color="textPrimary"
-                    align="left"
-                    component="h1"
-                    variant="h4"
-                    p={3}
+                  {" "}
+                  <Link
+                    offset={-80}
+                    smooth={true}
+                    duration={1000}
+                    component={RouterLink}
+                    to="home"
+                    className={classes.headerTitle}
                   >
-                    {" "}
                     Dott.ssa Marina Tricoli
-                  </Typography>
-                </MuiLink>
+                  </Link>
+                </Typography>
               </Grid>
 
               <Grid item md={4} container justifyContent="center">

@@ -42,8 +42,7 @@ const useStyles = makeStyles((theme) => ({
     transform: "scale(1.4)",
   },
   headerTitle: {
-    textDecoration: "none",
-    cursor: "default",
+    cursor: "pointer",
   },
   form: {
     minWidth: "100%",

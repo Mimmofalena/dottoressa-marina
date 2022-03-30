@@ -9,7 +9,7 @@ const LinkUtiliItem = (props) => {
       <ListItem className={classes.linkItem}>
         <Link
           sx={{ fontSize: "1.4em" }}
-          underline="none"
+          // underline="none"
           color="inherit"
           href={props.href}
           download={props.download}

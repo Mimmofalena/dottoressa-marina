@@ -24,7 +24,12 @@ const orari = [
 const OrariStudio = () => {
   const theme = useTheme();
   return (
-    <Box mb={4}>
+    <Box id="orari-studio" mb={4}>
+      {/* <Box p={1} mb={1}>
+        <Typography textAlign="center" variant="h4" gutterBottom>
+          Orari Studio per appuntamento
+        </Typography>
+      </Box> */}
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 300 }} aria-label="simple table">
           <TableHead>
