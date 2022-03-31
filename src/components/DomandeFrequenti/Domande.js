@@ -3,38 +3,37 @@ import flowChartCovid from "../../assets/isolamento-flowchart-FIMMG-2022-covid.j
 const DOMANDE = [
   {
     title: "Devo prenotare l'appuntamento in studio?",
-    answer: ` Si. Invia la richiesta tramite mail lasciando il contatto telefonico. \n 
-    Quanto dura la visita? Massimo 30' a paziente \n
-    Il primo colloquio: Durante il primo colloquio verrà creata la cartella elettronica. Al fine di essere il più dettagliata possibile,
-    si prega di inoltrare in formato PDF tutti i documenti medici ed eventualmente portarli con se al colloqui. \n
-    NB: Visto il momento pandemico si raccomanda l'accesso in ambulatorio solo se strettamente necessario (es. visita medica). Si ricorda inoltre
-    che qualora fossero presenti sintomi quali febbre, tosse e 'Covid-correlati' è necessaria la consulenza telefonica prima della visita e tampone antigenico
+    answer: ` Si. Invia la richiesta tramite mail lasciando il contatto telefonico o tramite messaggio whatsapp. \n 
+    La durata massima di ogni visita per paziente e' di 30 minuti. \n
+    Durante il primo colloquio verrà creata la cartella clinica elettronica. Al fine di essere il più dettagliata possibile,
+    si prega di inoltrare in formato PDF tutti i documenti medici ed eventualmente portarli con se al colloquio. \n
+    NB: Visto il momento pandemico si raccomanda l'accesso in ambulatorio solo se strettamente necessario (es. visita medica, rilascio di certificazioni etc.). Si ricorda inoltre
+    che se presenti sintomi quali febbre, tosse e 'Covid-correlati' sara' necessario prima della visita effettuare la consulenza telefonica ed eventuale tampone naso-faringeo(rapido o molecolare).
     `,
   },
 
   {
-    title: "Ho dubbi inerente l'isolamento da COVID. Cosa faccio?",
-    answer: `Le normative COVID sono in continua evoluzione. Di seguito il flow chart della Federazione Italiana Medici di Medicina Generale spiega il processo di isolamento.`,
-    src: flowChartCovid,
-    alt: "FIMMG covid flow chart",
+    title:
+      "Dove inoltrare la richiesta di ricette per terapie croniche, referti medici e certificati di malattia?",
+    answer: `Tutte le richieste vanno effettuate via mail. Le ricette delle terapie croniche verranno evase entro le 24-48h dalla ricezione.
+     Al fine di garantire una maggiore privacy, i referti di eventuali esami ed accertamenti dovranno esserre mandati via mail (e NON tramite Whatsapp).
+      Il telefono verra' riservato per le consulenze mediche e le richieste urgenti. `,
   },
   {
-    title: "Posso vaccinarmi dal mio medico di medicina generale?",
-    answer: "...",
+    title:
+      "Quando bisogna contattare la guardia medica e non il medico di famiglia?",
+    answer: `Il medico di famiglia e la guardia medica rientrano nella stessa categoria definita "continuita' assistenziale". Cio' vuol dire che negli orari notturni dalle 20:00 alle 08:00, nei weekend, nei giorni pre-festivi (se lo studio ha orario pomeridiano) e nei giorni festivi sara' possibile contattare il medico di guardia medica piu' vicino alla propria residenza.
+    
+    Tra i compiti della guardia medica : visita, rilascio certificato di malattia, prescrizione farmaci indifferibili, inizio isolamento in caso di positivita' al covid. 
+     
+     NB: La guardia medica non puo' rilasciare prescrizione di esami ematochimici e di diagnostica strumentale. `,
   },
-  {
-    title: "Green pass",
-    answer: "...",
-  },
-  //   {
-  //     title: "Cosa fare in caso di emergenza?",
-  //     answer: ` In situazioni di emergenza si ricorda la possibilità di chiamare il 118 che invierà un’ambulanza per il trasporto al pronto soccorso. Alcuni esempi possono essere crisi respiratorie o dolore toracico`,
-  //   },
-  //   {
-  //     title: "Quanto si paga un certificato?",
-  //     answer: ` Sana e buona costituzione 35 euro.
+
+  // {
+  //   title: "Quanto si paga un certificato?",
+  //   answer: ` Sana e buona costituzione 35 euro.
   // `,
-  //   },
+  // },
   //   {
   //     title:
   //       "Avere l’assistenza sanitaria temporanea quando si è momentaneamente domiciliati presso una Regione diversa da quella di residenza?",
@@ -63,26 +62,46 @@ const DOMANDE = [
 
   // Riferimenti normativi: Circolare del Ministero della Sanità 11 maggio 1984, n. 1000.116`,
   //   },
-  //   {
-  //     title: "Quali Vaccinazioni sono disponibili? Come posso prenotarmi?",
-  //     answer: `Eseguo sia vaccinazioni COVID-19 e vaccino anti influenzale. Per effettuare i vaccini bisogna prenotarsi al fine di
-  //     evitare sprechi. Chiama in studio, invia una mail o contattami via Whatsapp.
-  // `,
-  //   },
-  //   {
-  //     title: "Quando posso richiedere una visita domiciliare?",
-  //     answer: `Le visite a domicilio vanno sempre richieste al medico e non alla segretaria. Vengono effettuate
-  // ai pazienti non trasportabili o che stanno troppo male per venire in studio
-  // ai pazienti in assistenza domiciliare programmata (ADP) o integrata (ADI)
-  // ai pazienti che non possono superare le barriere architettoniche dello studio.
-  // Le visite domiciliari debbono essere richieste entro le ore 10 del mattino, altrimenti possono essere fatte il giorno successivo.
 
-  // Le visite urgenti (a giudizio del medico) sono effettuate nel più breve tempo possibile dopo il recepimento della chiamata.
+  {
+    title: "Quando posso richiedere una visita domiciliare?",
+    answer: `Le visite a domicilio vanno sempre richieste al medico e non alla segretaria. Vengono effettuate:
+  - ai pazienti non trasportabili o le cui condizioni cliniche sono tali da non potersi recare in studio
+  - ai pazienti in assistenza domiciliare programmata (ADP) o integrata (ADI)
+  - ai pazienti che non possono superare le barriere architettoniche dello studio
+  
+  Si raccomanda di richiedere visite domiciliari solo se strettamente necessario: il tempo per effettuare una visita domiciliare è quello impiegato per visitare 3-4 pazienti in studio, quindi le visite a domicilio sono molto onerose per il medico, che ha anche diversi pazienti non trasportabili, invalidi o con gravi problemi di salute, da controllare periodicamente in modo programmato. 
 
-  // Si raccomanda di richiedere visite domiciliari solo se strettamente necessario: il tempo per effettuare una visita domiciliare è quello impiegato per visitare 3-4 pazienti in studio, quindi le visite a domicilio sono molto onerose per il medico, che ha anche diversi pazienti non trasportabili, invalidi o con gravi problemi di salute,
-  // da controllare periodicamente in modo programmato.
-  // `,
-  //   },
+  NB: Si ricorda che il medico di medicina generale non e' un medico di Emergenza e Urgenza. Pertanto in situazioni critiche non esitate a chiamare il 118!
+  `,
+  },
+  {
+    title: "Quali Vaccinazioni sono disponibili? Come posso prenotarmi?",
+    answer: `Vaccino anti influenzale, vaccino anti pneumococco, vaccino anti herpes zoster, vaccino anti covid-19.
+     Per prenotare inviare la richiesta via mail o telefonicamente e verrete ricontattati per programmare insieme giorno e orario.
+  `,
+  },
+  {
+    title: "Quali certificati posso richiedere?",
+    answer: `Certificati a pagamento e non...`,
+  },
+  {
+    title: "Ho dubbi inerente l'isolamento da COVID. Cosa faccio?",
+    answer: `Le normative COVID sono in continua evoluzione. Di seguito il flow chart della Federazione Italiana Medici di Medicina Generale spiega il processo di isolamento.`,
+    src: flowChartCovid,
+    alt: "FIMMG covid flow chart",
+  },
+  {
+    title: "Come posso richiedere il greenpass?",
+    answer: (
+      <p>
+        Per il rilascio della certificazione verde (Green pass) e' stato creato
+        un padiglione dedicato presso la Fiera del Mediterraneo. Per
+        prenotazione ed ulteriori informazioni consultare il seguente &nbsp;
+        <a href="https://fiera.asppalermo.org/site/greenpass-index">link</a>
+      </p>
+    ),
+  },
 ];
 
 export default DOMANDE;

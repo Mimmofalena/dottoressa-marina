@@ -11,6 +11,7 @@ import {
   TableBody,
 } from "@mui/material";
 import { useTheme } from "@mui/styles";
+import useStyles from "../Utils/Styles";
 import { v4 as uuidv4 } from "uuid";
 
 const orari = [
@@ -23,15 +24,12 @@ const orari = [
 
 const OrariStudio = () => {
   const theme = useTheme();
+  const classes = useStyles();
+
   return (
     <Box id="orari-studio" mb={4}>
-      {/* <Box p={1} mb={1}>
-        <Typography textAlign="center" variant="h4" gutterBottom>
-          Orari Studio per appuntamento
-        </Typography>
-      </Box> */}
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 300 }} aria-label="simple table">
+        <Table className={classes.orariStudioTable} aria-label="simple table">
           <TableHead>
             <TableRow
               sx={{

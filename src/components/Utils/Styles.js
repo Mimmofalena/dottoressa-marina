@@ -82,6 +82,12 @@ const useStyles = makeStyles((theme) => ({
       transform: "scale(1.1)",
     },
   },
+  orariStudioTable: {
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "80%",
+      margin: "0 auto",
+    },
+  },
 }));
 
 export default useStyles;
