@@ -15,8 +15,7 @@ import {
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 
 import { Link as RouterLink } from "react-router-dom";
-import { Link as MuiLink } from "@mui/material";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-scroll";
 import useStyles from "../Utils/Styles";
@@ -79,79 +78,6 @@ const Header = () => {
                   </IconButton>
                 </Grid>
                 <Menus />
-
-                {/* <Grid item>
-                  <IconButton
-                    className={classes.textColor}
-                    size="small"
-                    aria-controls="simple-menu"
-                    aria-haspopup="true"
-                    onClick={handleClick}
-                  >
-                    <MoreHorizIcon />
-                  </IconButton>
-                  <Menu
-                    anchorOrigin={{
-                      vertical: "bottom",
-                      horizontal: "center",
-                    }}
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "center",
-                    }}
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    keepMounted
-                    open={Boolean(anchorEl)}
-                    onClose={handleClose}
-                  >
-                    <Link
-                      offset={-80}
-                      to="servizi-offerti"
-                      smooth={true}
-                      duration={1000}
-                    >
-                      <MenuItem onClick={handleClose}>Servizi Offerti</MenuItem>
-                    </Link>
-
-                    <Link
-                      offset={-80}
-                      to="curriculum"
-                      smooth={true}
-                      duration={1000}
-                    >
-                      <MenuItem onClick={handleClose}>
-                        Il mio curriculum
-                      </MenuItem>
-                    </Link>
-                    <Link
-                      offset={-80}
-                      to="domande-frequenti"
-                      smooth={true}
-                      duration={1000}
-                    >
-                      <MenuItem onClick={handleClose}>
-                        Domande Frequenti
-                      </MenuItem>
-                    </Link>
-                    <Link
-                      offset={-80}
-                      to="contattami"
-                      smooth={true}
-                      duration={1000}
-                    >
-                      <MenuItem onClick={handleClose}>Contattami</MenuItem>
-                    </Link>
-                    <Link
-                      offset={-80}
-                      to="dove-trovarmi"
-                      smooth={true}
-                      duration={1000}
-                    >
-                      <MenuItem onClick={handleClose}>Dove trovarmi</MenuItem>
-                    </Link>
-                  </Menu>
-                </Grid> */}
               </Grid>
             </Container>
           </Hidden>

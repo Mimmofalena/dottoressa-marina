@@ -10,7 +10,6 @@ import {
 import Domanda from "./Domanda";
 import DOMANDE from "./Domande";
 import useStyles from "../Utils/Styles";
-import { borderTop } from "@mui/system";
 
 const DomandeFrequenti = () => {
   const theme = useTheme();

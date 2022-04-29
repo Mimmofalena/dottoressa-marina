@@ -19,30 +19,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 
-import emailjs from "emailjs-com";
-import OrariStudio from "./OrariStudio";
-
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const USER_ID = process.env.REACT_APP_EMAILJS_ID;
-
 const Contacts = () => {
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  const handleSend = async () => {};
-
-  const sendEmailHandler = (object) => {
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, object, USER_ID).then(
-      (result) => {
-        toast.success("Messaggio inviato con successo");
-      },
-      (error) => {
-        toast.error("Si e' verificato un errore!");
-
-        console.log(error);
-      }
-    );
-  };
-
   const classes = useStyles();
   const validationSchema = Yup.object({
     firstName: Yup.string().required("Campo obbligatorio"),
@@ -146,54 +123,9 @@ const Contacts = () => {
                   console.log(err);
                   toast.error("Si e' verificato un errore!");
                 });
-              // .finally(actions.setSubmitting(false));
-              //   const data = response.then((data) => data);
-              //   console.log(response);
-              //   console.log(data);
-              // } catch (err) {
-              //   console.log(err);
-              // } finally {
-              //   actions.setSubmitting(false);
-              // }
-
-              // console.log(values);
-              // await axios
-              //   .post(
-              //     "http://localhost:3000/dottoressa-marina/send_mail",
-              //     payload
-              //   )
-              //   .then((res) => {
-              //     console.log("ASOIDJASOIDAJSOIDAJDOS");
-              //     if (res.status === 200) {
-              //       actions.setStatus({
-              //         sent: true,
-              //         msg: "Message has been sent successfully!",
-              //       });
-              //     }
-              //     console.log("ASOIDJASOIDAJSOIDAJDOS");
-              //     // console.log(res);
-              //     // toast.success("Messaggio inviato con successo");
-              //     alert("SUCCESSO");
-              //   })
-              //   .catch((err) => {
-              //     actions.setStatus({
-              //       sent: false,
-              //       msg: `Error! ${err}. Please try again later`,
-              //     });
-              //     // console.log(err);
-              //     // toast.error("Si e' verificato un errore!");
-              //     alert("DECESSO");
-              //   })
-              //   .finally(actions.setSubmitting(false));
-
-              // actions.setSubmitting(false);
-              // console.log(actions);
-              // actions.setSubmitting(false);
-              // actions.resetForm();
             }}
           >
             {(formik) => {
-              // console.log(formik);
               return (
                 <>
                   <Form onSubmit={formik.handleSubmit} className={classes.form}>
@@ -276,101 +208,6 @@ const Contacts = () => {
               );
             }}
           </Formik>
-
-          {/* <Formik
-            onSubmit={(values, actions) => {
-              sendEmailHandler(values);
-              actions.setSubmitting(false);
-              actions.resetForm();
-            }}
-            validateOnMount
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-          >
-            {(formik) => {
-              console.log(formik.values);
-              return (
-                <>
-                  <Form className={classes.form}>
-                    <Field
-                      className={classes.inputField}
-                      as={TextField}
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      label="Nome"
-                      variant="outlined"
-                    ></Field>
-                    <ErrorMessage name="firstName">
-                      {(errorMsg) => (
-                        <div style={{ color: "red" }}>{errorMsg}</div>
-                      )}
-                    </ErrorMessage>
-
-                    <Field
-                      className={classes.inputField}
-                      as={TextField}
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      label="Cognome"
-                      variant="outlined"
-                    />
-                    <ErrorMessage name="lastName">
-                      {(errorMsg) => (
-                        <div style={{ color: "red" }}>{errorMsg}</div>
-                      )}
-                    </ErrorMessage>
-
-                    <Field
-                      className={classes.inputField}
-                      as={TextField}
-                      id="email"
-                      name="email"
-                      type="email"
-                      label="Email"
-                      variant="outlined"
-                    />
-
-                    <ErrorMessage name="email">
-                      {(errorMsg) => (
-                        <div style={{ color: "red" }}>{errorMsg}</div>
-                      )}
-                    </ErrorMessage>
-
-                    <Field
-                      className={classes.inputField}
-                      as={TextField}
-                      id="message"
-                      name="message"
-                      type="text"
-                      label="Messaggio"
-                      multiline={true}
-                      rows={6}
-                      variant="outlined"
-                      placeholder="Descrivi brevemente il tuo problema..."
-                    />
-                    <ErrorMessage name="message">
-                      {(errorMsg) => (
-                        <div style={{ color: "red" }}>{errorMsg}</div>
-                      )}
-                    </ErrorMessage>
-
-                    <Box p={1} textAlign="center">
-                      <Button
-                        disabled={formik.isSubmitting}
-                        type="submit"
-                        variant="contained"
-                        color="secondary"
-                      >
-                        Submit
-                      </Button>
-                    </Box>
-                  </Form>
-                </>
-              );
-            }}
-          </Formik> */}
         </Grid>
       </CardContent>
       <Typography p={1}>

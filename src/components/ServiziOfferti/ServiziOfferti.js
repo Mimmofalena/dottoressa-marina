@@ -1,9 +1,6 @@
-import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
-import ImportContactsIcon from "@mui/icons-material/ImportContacts";
-import NoteIcon from "@mui/icons-material/Note";
-import { Grid, Typography, Card, CardContent, CardMedia } from "@mui/material";
+import { Grid, Typography, Card, CardContent } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
-import SyringeIcon from "../../assets/syringe-icon.svg";
+
 import React from "react";
 import Servizio from "./Servizio";
 import useStyles from "../Utils/Styles";
@@ -57,64 +54,6 @@ const ServiziOfferti = () => {
                   </Grid>
                 );
               })}
-              {/* <Grid xs={12} item>
-                <Servizio
-                  number="1"
-                  icon={<HomeIcon className={classes.icon} />}
-                  typography={"Visite Domiciliari"}
-                />
-              </Grid>
-              <Grid xs={12} item>
-                <Servizio
-                  number="2"
-                  icon={<HomeIcon className={classes.icon} />}
-                  typography={"Consulenze telefoniche"}
-                />
-              </Grid>
-
-              <Grid xs={12} item>
-                <Servizio
-                  number="3"
-                  icon={<ImportContactsIcon className={classes.icon} />}
-                  typography={"Cartella Computerizzata"}
-                />
-              </Grid>
-              <Grid xs={12} item>
-                <Servizio
-                  number="4"
-                  icon={<ImportContactsIcon className={classes.icon} />}
-                  typography={"Medicazioni"}
-                />
-              </Grid>
-
-              <Grid xs={12} item>
-                <Servizio
-                  number="5"
-                  icon={<LocalHospitalIcon className={classes.icon} />}
-                  typography={"Visite Ambulatoriali"}
-                />
-              </Grid>
-
-              <Grid xs={12} item>
-                <Servizio
-                  number="6"
-                  icon={<NoteIcon className={classes.icon} />}
-                  typography={"Certificati a pagamento e non"}
-                />
-              </Grid>
-
-              <Grid xs={12} item>
-                <Servizio
-                  icon={
-                    <CardMedia
-                      className={classes.icon}
-                      image={SyringeIcon}
-                      alt="a syringe icon"
-                    />
-                  }
-                  typography={"Vaccini"}
-                />
-              </Grid> */}
             </Grid>
           </Grid>
         </Grid>

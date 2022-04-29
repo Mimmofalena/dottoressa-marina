@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Typography, Box, Paper } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import useStyles from "../Utils/Styles";
 import { useTheme } from "@mui/styles";

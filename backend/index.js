@@ -1,11 +1,13 @@
 const express = require("express");
+const path = require("path");
 const app = express();
-console.log(require("dotenv").config());
 require("dotenv").config();
 const bodyParser = require("body-parser");
 
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+
+app.use(express.static(path.resolve(__dirname, "/build")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,13 +28,12 @@ app.post("/dottoressa-marina/send_mail", cors(), async (req, res, next) => {
       },
     });
 
-    await transport.sendMail(
-      {
-        from: process.env.MAIL_USER,
-        replyTo: email,
-        to: "cucinotta.dom@gmail.com",
-        subject: `Nuova mail ricevuta da ${email}`,
-        html: `<div className="email" style="
+    await transport.sendMail({
+      from: process.env.MAIL_USER,
+      replyTo: email,
+      to: process.env.MAIL_TO,
+      subject: `Nuova mail ricevuta da ${email}`,
+      html: `<div className="email" style="   
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -47,25 +48,13 @@ app.post("/dottoressa-marina/send_mail", cors(), async (req, res, next) => {
             
             
             </div>`,
-      }
-      // function (error, response) {
-      //   if (error) {
-      //     console.log(error);
-      //   } else {
-      //     console.log("mail sent");
-      //   }
-      // }
-    );
-    console.log("before end");
+    });
+
     res.status(200);
     res.end();
   } catch (err) {
     res.status(400);
   }
-});
-
-app.get("/", (req, res) => {
-  res.send("hello man");
 });
 
 app.listen(process.env.PORT || 3000, () => {
