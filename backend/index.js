@@ -7,6 +7,20 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
+app.use(cors());
+
+app.use(function (req, res, next) {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "http://www.dottoressamarinatricoli.it/"
+  ); // update to match the domain you will make the request from
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 const PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = "development";
 process.env.NODE_ENV = "production";
@@ -23,12 +37,10 @@ app.use(express.static(path.resolve(__dirname, "/build")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(cors());
-
 // app.get("/json", (req, res) => {
 //   res.json({ nome: "dio", cognome: "infame" });
 // });
-app.post(`/api/form`, cors(), async (req, res, next) => {
+app.post(`/api/form`, async (req, res, next) => {
   try {
     console.log(req.body);
     let { message, firstName, lastName, email } = req.body;
