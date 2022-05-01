@@ -20,6 +20,7 @@ import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 
 const Contacts = () => {
+  console.log(process.env);
   const classes = useStyles();
   const validationSchema = Yup.object({
     firstName: Yup.string().required("Campo obbligatorio"),
@@ -110,10 +111,7 @@ const Contacts = () => {
               };
 
               await axios
-                .post(
-                  "http://localhost:3000/dottoressa-marina/send_mail",
-                  payload
-                )
+                .post("http://localhost:3000/api/form", payload)
                 .then((res) => {
                   console.log(res);
                   if (res.status === 200)

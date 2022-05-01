@@ -25,25 +25,25 @@ const Layout = () => {
       <Box className={classes.toolbar}></Box>
       <SubHeadingSection />
 
-      <Switch>
-        <Route exact path="/">
-          <ServiziOfferti />
+      {/* <Switch> */}
+      {/* <Route exact path="/"> */}
+      <ServiziOfferti />
 
-          <Curriculum />
+      <Curriculum />
 
-          <DomandeFrequenti />
+      <DomandeFrequenti />
 
-          <Contacts />
+      <Contacts />
 
-          <OrariStudio />
+      <OrariStudio />
 
-          <ScrollToTop />
+      <ScrollToTop />
 
-          <Maps />
+      <Maps />
 
-          <LinkUtili />
-        </Route>
-      </Switch>
+      <LinkUtili />
+      {/* </Route> */}
+      {/* // </Switch> */}
       <Footer />
     </Box>
   );

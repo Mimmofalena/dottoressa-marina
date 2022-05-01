@@ -24,13 +24,13 @@ const theme = createTheme(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename="/dottoressa-marina">
-      <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <App />
-        </ThemeProvider>
-      </StyledEngineProvider>
-    </Router>
+    {/* <Router basename="/dottoressa-marina"> */}
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </StyledEngineProvider>
+    {/* </Router> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

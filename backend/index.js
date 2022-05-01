@@ -7,6 +7,17 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
+const PORT = process.env.PORT || 3000;
+process.env.NODE_ENV = "development";
+process.env.NODE_ENV = "production";
+let URL;
+
+if (process.env.NODE_ENV === "production") {
+  URL = process.env.URL_PRODUCTION;
+} else if (process.env.NODE_ENV === "development") {
+  URL = process.env.URL_DEVELOPMENT;
+}
+
 app.use(express.static(path.resolve(__dirname, "/build")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,14 +25,17 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-app.post("/dottoressa-marina/send_mail", cors(), async (req, res, next) => {
+// app.get("/json", (req, res) => {
+//   res.json({ nome: "dio", cognome: "infame" });
+// });
+app.post(`/api/form`, cors(), async (req, res, next) => {
   try {
+    console.log(req.body);
     let { message, firstName, lastName, email } = req.body;
 
     const transport = nodemailer.createTransport({
       service: "gmail",
-      //   host: process.env.MAIL_HOST,
-      //   port: process.env.MAIL_PORT,
+
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
@@ -51,12 +65,21 @@ app.post("/dottoressa-marina/send_mail", cors(), async (req, res, next) => {
     });
 
     res.status(200);
+    res.json({
+      data: req.body,
+    });
     res.end();
   } catch (err) {
+    console.log(err);
     res.status(400);
   }
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server started on port 3000..");
+console.log("we are in", process.env.NODE_ENV);
+// console.log(process.env.URL_DEVELOPMENT);
+// console.log(process.env.URL_PRODUCTION);
+console.log("URL is", URL);
+
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}..`);
 });
