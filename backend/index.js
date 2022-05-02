@@ -32,12 +32,12 @@ const PORT = process.env.PORT || 3000;
 //   URL = process.env.URL_DEVELOPMENT;
 // }
 
-// app.use(express.static(path.resolve(__dirname, "/build")));
+app.use(express.static(path.resolve(__dirname, "/build")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get(`dottoressamarinatricoli.it/`, (req, res, next) => {
+app.get(`/`, (req, res, next) => {
   try {
     res.json({
       message: "bb",
