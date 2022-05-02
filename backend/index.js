@@ -24,13 +24,14 @@ app.use(function (req, res, next) {
 const PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = "development";
 process.env.NODE_ENV = "production";
-let URL;
+let URL = "";
 
 if (process.env.NODE_ENV === "production") {
   URL = process.env.URL_PRODUCTION;
-} else if (process.env.NODE_ENV === "development") {
-  URL = process.env.URL_DEVELOPMENT;
 }
+// else if (process.env.NODE_ENV === "development") {
+//   URL = process.env.URL_DEVELOPMENT;
+// }
 
 app.use(express.static(path.resolve(__dirname, "/build")));
 
@@ -40,26 +41,28 @@ app.use(bodyParser.json());
 // app.get("/json", (req, res) => {
 //   res.json({ nome: "dio", cognome: "infame" });
 // });
-app.post(`/api/form`, async (req, res, next) => {
-  try {
-    console.log(req.body);
-    let { message, firstName, lastName, email } = req.body;
+app.post(
+  `http://www.dottoressamarinatricoli.it//api/form`,
+  async (req, res, next) => {
+    try {
+      console.log(req.body);
+      let { message, firstName, lastName, email } = req.body;
 
-    const transport = nodemailer.createTransport({
-      service: "gmail",
+      const transport = nodemailer.createTransport({
+        service: "gmail",
 
-      auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
-      },
-    });
+        auth: {
+          user: process.env.MAIL_USER,
+          pass: process.env.MAIL_PASS,
+        },
+      });
 
-    await transport.sendMail({
-      from: process.env.MAIL_USER,
-      replyTo: email,
-      to: process.env.MAIL_TO,
-      subject: `Nuova mail ricevuta da ${email}`,
-      html: `<div className="email" style="   
+      await transport.sendMail({
+        from: process.env.MAIL_USER,
+        replyTo: email,
+        to: process.env.MAIL_TO,
+        subject: `Nuova mail ricevuta da ${email}`,
+        html: `<div className="email" style="   
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -74,18 +77,19 @@ app.post(`/api/form`, async (req, res, next) => {
             
             
             </div>`,
-    });
+      });
 
-    res.status(200);
-    res.json({
-      data: req.body,
-    });
-    res.end();
-  } catch (err) {
-    console.log(err);
-    res.status(400);
+      res.status(200);
+      res.json({
+        data: req.body,
+      });
+      res.end();
+    } catch (err) {
+      console.log(err);
+      res.status(400);
+    }
   }
-});
+);
 
 console.log("we are in", process.env.NODE_ENV);
 // console.log(process.env.URL_DEVELOPMENT);

@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "set NODE_ENV=production & node index.js",
     "heroku-postbuild": "cd ../ && npm install & npm run build "
   },
   "author": "Dome",
@@ -17,5 +17,8 @@
     "express": "^4.17.1",
     "nodemailer": "^6.6.3",
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "14.17.4"
   }
 }
