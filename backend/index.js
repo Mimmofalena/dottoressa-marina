@@ -24,13 +24,13 @@ app.use(function (req, res, next) {
 const PORT = process.env.PORT || 3000;
 // process.env.NODE_ENV = "development";
 // process.env.NODE_ENV = "production";
-let URL = "";
+// let URL = "";
 
-if (process.env.NODE_ENV === "production") {
-  URL = process.env.URL_PRODUCTION;
-} else if (process.env.NODE_ENV === "development") {
-  URL = process.env.URL_DEVELOPMENT;
-}
+// if (process.env.NODE_ENV === "production") {
+//   URL = process.env.URL_PRODUCTION;
+// } else if (process.env.NODE_ENV === "development") {
+//   URL = process.env.URL_DEVELOPMENT;
+// }
 
 app.use(express.static(path.resolve(__dirname, "/build")));
 
