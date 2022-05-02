@@ -32,36 +32,43 @@ const PORT = process.env.PORT || 3000;
 //   URL = process.env.URL_DEVELOPMENT;
 // }
 
-app.use(express.static(path.resolve(__dirname, "/build")));
+// app.use(express.static(path.resolve(__dirname, "/build")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get(`dottoressamarinatricoli.it/`, (req, res, next) => {
+  try {
+    res.json({
+      message: "bb",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
 // app.get("/json", (req, res) => {
 //   res.json({ nome: "dio", cognome: "infame" });
 // });
-app.post(
-  `https://www.dottoressamarinatricoli.it/api/form`,
-  async (req, res, next) => {
-    try {
-      console.log(req.body);
-      let { message, firstName, lastName, email } = req.body;
+app.post(`dottoressamarinatricoli.it/form`, async (req, res, next) => {
+  try {
+    console.log(req.body);
+    let { message, firstName, lastName, email } = req.body;
 
-      const transport = nodemailer.createTransport({
-        service: "gmail",
+    const transport = nodemailer.createTransport({
+      service: "gmail",
 
-        auth: {
-          user: process.env.MAIL_USER,
-          pass: process.env.MAIL_PASS,
-        },
-      });
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
 
-      await transport.sendMail({
-        from: process.env.MAIL_USER,
-        replyTo: email,
-        to: process.env.MAIL_TO,
-        subject: `Nuova mail ricevuta da ${email}`,
-        html: `<div className="email" style="   
+    await transport.sendMail({
+      from: process.env.MAIL_USER,
+      replyTo: email,
+      to: process.env.MAIL_TO,
+      subject: `Nuova mail ricevuta da ${email}`,
+      html: `<div className="email" style="   
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -76,24 +83,23 @@ app.post(
             
             
             </div>`,
-      });
+    });
 
-      res.status(200);
-      res.json({
-        data: req.body,
-      });
-      res.end();
-    } catch (err) {
-      console.log(err);
-      res.status(400);
-    }
+    res.status(200);
+    res.json({
+      data: req.body,
+    });
+    res.end();
+  } catch (err) {
+    console.log(err);
+    res.status(400);
   }
-);
+});
 
 console.log("we are in", process.env.NODE_ENV);
 // console.log(process.env.URL_DEVELOPMENT);
 // console.log(process.env.URL_PRODUCTION);
-console.log("URL is", URL);
+// console.log("URL is", URL);
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}..`);
