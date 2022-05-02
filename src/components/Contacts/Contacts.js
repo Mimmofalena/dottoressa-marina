@@ -110,7 +110,10 @@ const Contacts = () => {
               };
 
               await axios
-                .post("http://www.dottoressamarinatricoli.it/api/form", payload)
+                .post(
+                  "https://www.dottoressamarinatricoli.it/api/form",
+                  payload
+                )
                 .then((res) => {
                   console.log(res);
                   if (res.status === 200)

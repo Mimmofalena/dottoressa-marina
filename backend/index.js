@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 //   res.json({ nome: "dio", cognome: "infame" });
 // });
 app.post(
-  `http://www.dottoressamarinatricoli.it/api/form`,
+  `https://www.dottoressamarinatricoli.it/api/form`,
   async (req, res, next) => {
     try {
       console.log(req.body);
