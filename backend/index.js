@@ -49,7 +49,7 @@ app.get(`dottoressamarinatricoli.it/`, (req, res, next) => {
 // app.get("/json", (req, res) => {
 //   res.json({ nome: "dio", cognome: "infame" });
 // });
-app.post(`dottoressamarinatricoli.it/form`, async (req, res, next) => {
+app.post(`/form`, async (req, res, next) => {
   try {
     console.log(req.body);
     let { message, firstName, lastName, email } = req.body;
