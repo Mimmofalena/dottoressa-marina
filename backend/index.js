@@ -7,21 +7,21 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-app.use(express.static(path.resolve(__dirname, "../build")));
 app.use(cors());
-console.log(__dirname);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "http://www.dottoressamarinatricoli.it/"
-  ); // update to match the domain you will make the request from
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.header(
+//     "Access-Control-Allow-Origin",
+//     "http://www.dottoressamarinatricoli.it/"
+//   ); // update to match the domain you will make the request from
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 
 const PORT = process.env.PORT || 3000;
 // process.env.NODE_ENV = "development";
@@ -34,10 +34,7 @@ const PORT = process.env.PORT || 3000;
 //   URL = process.env.URL_DEVELOPMENT;
 // }
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-app.get(`https://www.dottoressamarinatricoli.it/`, (req, res, next) => {
+app.get(`/`, (req, res, next) => {
   try {
     res.json({
       message: "Hello from server!",
@@ -47,32 +44,29 @@ app.get(`https://www.dottoressamarinatricoli.it/`, (req, res, next) => {
   }
 });
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
 
-app.post(
-  `https://www.dottoressamarinatricoli.it/form`,
-  async (req, res, next) => {
-    try {
-      console.log(req.body);
-      let { message, firstName, lastName, email } = req.body;
+app.post(`/form`, async (req, res, next) => {
+  try {
+    let { message, firstName, lastName, email } = req.body;
 
-      const transport = nodemailer.createTransport({
-        service: "gmail",
+    const transport = nodemailer.createTransport({
+      service: "gmail",
 
-        auth: {
-          user: process.env.MAIL_USER,
-          pass: process.env.MAIL_PASS,
-        },
-      });
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
 
-      await transport.sendMail({
-        from: process.env.MAIL_USER,
-        replyTo: email,
-        to: process.env.MAIL_TO,
-        subject: `Nuova mail ricevuta da ${email}`,
-        html: `<div className="email" style="   
+    await transport.sendMail({
+      from: process.env.MAIL_USER,
+      replyTo: email,
+      to: process.env.MAIL_TO,
+      subject: `Nuova mail ricevuta da ${email}`,
+      html: `<div className="email" style="   
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -87,24 +81,25 @@ app.post(
             
             
             </div>`,
-      });
+    });
 
-      res.status(200);
-      res.json({
-        data: req.body,
-      });
-      res.end();
-    } catch (err) {
-      console.log(err);
-      res.status(400);
-    }
+    res.status(200);
+    res.json({
+      data: {
+        message,
+        firstName,
+        lastName,
+        email,
+      },
+    });
+    res.end();
+  } catch (err) {
+    console.log(err);
+    res.status(400);
   }
-);
+});
 
-console.log("we are in", process.env.NODE_ENV);
-// console.log(process.env.URL_DEVELOPMENT);
-// console.log(process.env.URL_PRODUCTION);
-// console.log("URL is", URL);
+app.use(express.static(path.resolve(__dirname, "../build")));
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}..`);
