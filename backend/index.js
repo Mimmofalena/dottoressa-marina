@@ -8,6 +8,8 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 app.use(cors());
+app.use(express.static(path.resolve(__dirname, "../build")));
+console.log(__dirname);
 
 app.use(function (req, res, next) {
   res.header(
@@ -32,23 +34,19 @@ const PORT = process.env.PORT || 3000;
 //   URL = process.env.URL_DEVELOPMENT;
 // }
 
-app.use(express.static(path.resolve(__dirname, "/build")));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get(`/`, (req, res, next) => {
   try {
     res.json({
-      message: "bb",
+      message: "Hello from server!",
     });
   } catch (err) {
     console.log(err);
   }
 });
-// app.get("/json", (req, res) => {
-//   res.json({ nome: "dio", cognome: "infame" });
-// });
+
 app.post(`/form`, async (req, res, next) => {
   try {
     console.log(req.body);
