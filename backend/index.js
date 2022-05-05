@@ -7,8 +7,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-app.use(cors());
 app.use(express.static(path.resolve(__dirname, "../build")));
+app.use(cors());
 console.log(__dirname);
 
 // app.use(function (req, res, next) {
