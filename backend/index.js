@@ -47,6 +47,10 @@ app.get(`https://www.dottoressamarinatricoli.it/`, (req, res, next) => {
   }
 });
 
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 app.post(
   `https://www.dottoressamarinatricoli.it/form`,
   async (req, res, next) => {
