@@ -7,9 +7,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
+const PORT = process.env.PORT || 3002;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 // app.use(function (req, res, next) {
 //   res.header(
@@ -23,7 +26,6 @@ app.use(bodyParser.json());
 //   next();
 // });
 
-const PORT = process.env.PORT || 3000;
 // process.env.NODE_ENV = "development";
 // process.env.NODE_ENV = "production";
 // let URL = "";
@@ -99,7 +101,9 @@ app.post(`/form`, async (req, res, next) => {
   }
 });
 
-app.use(express.static(path.resolve(__dirname, "../build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}..`);

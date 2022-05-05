@@ -110,7 +110,7 @@ const Contacts = () => {
               };
 
               await axios
-                .post("http://localhost:3000/form", payload)
+                .post("https://marinatricolidoc.herokuapp.com/form", payload)
                 .then((res) => {
                   console.log(res);
                   if (res.status === 200)
