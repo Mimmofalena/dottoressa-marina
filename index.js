@@ -36,6 +36,15 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+// if (process.env.NODE_ENV === "production") {
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname), "client/build", "index.html");
+});
+// }
+
 app.get(`/`, (req, res, next) => {
   try {
     res.json({
@@ -96,14 +105,6 @@ app.post(`/form`, async (req, res, next) => {
     res.status(400);
   }
 });
-
-// if (process.env.NODE_ENV === "production") {
-app.use(express.static(path.join(__dirname, "client/build")));
-
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname), "client/build", "index.html");
-});
-// }
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname + "/client/build/index.html"));
