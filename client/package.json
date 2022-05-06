@@ -30,7 +30,7 @@
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
-  "homepage": ".",
+  "proxy": "http://localhost:8080",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
