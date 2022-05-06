@@ -93,6 +93,7 @@ app.post(`/form`, async (req, res, next) => {
         email,
       },
     });
+    res.json({ hello: "from the other side /form" });
     res.end();
   } catch (err) {
     console.log(err);
@@ -100,13 +101,13 @@ app.post(`/form`, async (req, res, next) => {
   }
 });
 
-// if (process.env.NODE_ENV === "production") {
-app.use(express.static(path.join(__dirname, "client/build")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname), "client/build", "index.html");
-});
-// }
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname), "client/build", "index.html");
+  });
+}
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname + "/client/build/index.html"));
