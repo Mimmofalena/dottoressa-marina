@@ -39,6 +39,12 @@ const whitelist = [
 
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname), "./client/build", "index.html");
+});
+
 app.get(`/`, (req, res, next) => {
   try {
     res.json({
@@ -99,12 +105,6 @@ app.post(`/form`, async (req, res, next) => {
     console.log(err);
     res.status(400);
   }
-});
-
-app.use(express.static(path.join(__dirname, "./client/build")));
-
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname), "./client/build", "index.html");
 });
 
 // if (process.env.NODE_ENV === "production") {
