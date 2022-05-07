@@ -9,7 +9,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const PORT = process.env.PORT || 8080;
-app.use(helmet());
+// app.use(helmet());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
