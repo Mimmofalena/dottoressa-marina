@@ -105,6 +105,7 @@ app.post(`/form`, async (req, res, next) => {
     console.log(err);
     res.status(400);
   }
+  next();
 });
 
 // if (process.env.NODE_ENV === "production") {
