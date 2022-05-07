@@ -30,7 +30,7 @@
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "https://marinatricolidoc.herokuapp.com/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
