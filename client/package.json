@@ -30,7 +30,6 @@
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
-  "homepage": "https://marinatricolidoc.herokuapp.com/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
