@@ -39,6 +39,8 @@ const whitelist = [
 
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
 app.get(`/`, (req, res, next) => {
   try {
     res.json({
@@ -101,8 +103,6 @@ app.post(`/form`, async (req, res, next) => {
   }
   next();
 });
-
-app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname), "./client/build", "index.html");
