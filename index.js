@@ -16,69 +16,59 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-// app.get(`/`, (req, res, next) => {
-//   try {
-//     res.json({
-//       message: "Hello from server!",
-//     });
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
-
-// app.post(`/form`, async (req, res, next) => {
-//   try {
-//     let { message, firstName, lastName, email } = req.body;
-
-//     const transport = nodemailer.createTransport({
-//       service: "gmail",
-
-//       auth: {
-//         user: process.env.MAIL_USER,
-//         pass: process.env.MAIL_PASS,
-//       },
-//     });
-
-//     await transport.sendMail({
-//       from: process.env.MAIL_USER,
-//       replyTo: email,
-//       to: process.env.MAIL_TO,
-//       subject: `Nuova mail ricevuta da ${email}`,
-//       html: `<div className="email" style="
-//             border: 1px solid black;
-//             padding: 20px;
-//             font-family: sans-serif;
-//             line-height: 2;
-//             font-size: 20px;
-//             ">
-//             <h2>Hai ricevuto una mail da:</h2>
-//             <p>Utente: ${firstName} ${lastName}</p>
-//             <p>Email: ${email}</p>
-//             <br/>
-//             <p>Messaggio: <br/>${message}</p>
-
-//             </div>`,
-//     });
-
-//     res.json({
-//       data: {
-//         message,
-//         firstName,
-//         lastName,
-//         email,
-//       },
-//     });
-
-//     res.status(200);
-//     res.end();
-//   } catch (err) {
-//     console.log(err);
-//     res.status(400);
-//   }
-//   next();
-// });
-
 app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.post(`/form`, async (req, res, next) => {
+  try {
+    let { message, firstName, lastName, email } = req.body;
+
+    const transport = nodemailer.createTransport({
+      service: "gmail",
+
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
+
+    await transport.sendMail({
+      from: process.env.MAIL_USER,
+      replyTo: email,
+      to: process.env.MAIL_TO,
+      subject: `Nuova mail ricevuta da ${email}`,
+      html: `<div className="email" style="
+            border: 1px solid black;
+            padding: 20px;
+            font-family: sans-serif;
+            line-height: 2;
+            font-size: 20px;
+            ">
+            <h2>Hai ricevuto una mail da:</h2>
+            <p>Utente: ${firstName} ${lastName}</p>
+            <p>Email: ${email}</p>
+            <br/>
+            <p>Messaggio: <br/>${message}</p>
+
+            </div>`,
+    });
+
+    res.json({
+      data: {
+        message,
+        firstName,
+        lastName,
+        email,
+      },
+    });
+
+    res.status(200);
+    res.end();
+  } catch (err) {
+    console.log(err);
+    res.status(400);
+  }
+  next();
+});
 
 app.post("/", (req, res) => {
   res.status(200).json({ message: "IT WORKED!!!!!" });
