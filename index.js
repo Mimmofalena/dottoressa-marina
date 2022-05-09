@@ -63,6 +63,8 @@ app.post(`/form`, async (req, res, next) => {
     res.end();
   } catch (err) {
     console.log(err);
+    console.log(res.json());
+
     res.status(400);
   }
   next();
