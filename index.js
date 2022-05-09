@@ -25,28 +25,26 @@ app.use(cors());
 //     console.log(err);
 //   }
 // });
-app.use(express.static(path.join(__dirname, "./client/build")));
-app.post(
-  `https://marinatricolidoc.herokuapp.com/form`,
-  async (req, res, next) => {
-    try {
-      let { message, firstName, lastName, email } = req.body;
 
-      const transport = nodemailer.createTransport({
-        service: "gmail",
+app.post(`/form`, async (req, res, next) => {
+  try {
+    let { message, firstName, lastName, email } = req.body;
 
-        auth: {
-          user: process.env.MAIL_USER,
-          pass: process.env.MAIL_PASS,
-        },
-      });
+    const transport = nodemailer.createTransport({
+      service: "gmail",
 
-      await transport.sendMail({
-        from: process.env.MAIL_USER,
-        replyTo: email,
-        to: process.env.MAIL_TO,
-        subject: `Nuova mail ricevuta da ${email}`,
-        html: `<div className="email" style="   
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
+
+    await transport.sendMail({
+      from: process.env.MAIL_USER,
+      replyTo: email,
+      to: process.env.MAIL_TO,
+      subject: `Nuova mail ricevuta da ${email}`,
+      html: `<div className="email" style="   
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -61,26 +59,27 @@ app.post(
             
             
             </div>`,
-      });
+    });
 
-      res.json({
-        data: {
-          message,
-          firstName,
-          lastName,
-          email,
-        },
-      });
+    res.json({
+      data: {
+        message,
+        firstName,
+        lastName,
+        email,
+      },
+    });
 
-      res.status(200);
-      res.end();
-    } catch (err) {
-      console.log(err);
-      res.status(400);
-    }
-    next();
+    res.status(200);
+    res.end();
+  } catch (err) {
+    console.log(err);
+    res.status(400);
   }
-);
+  next();
+});
+
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname), "./client/build", "index.html");
