@@ -25,7 +25,7 @@ app.use(cors());
 //     console.log(err);
 //   }
 // });
-
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.post(`/form`, async (req, res, next) => {
   try {
     let { message, firstName, lastName, email } = req.body;
@@ -78,8 +78,6 @@ app.post(`/form`, async (req, res, next) => {
   }
   next();
 });
-
-app.use(express.static(path.join(__dirname, "..", "/client/build")));
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname), "./client/build", "index.html");
