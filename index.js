@@ -9,14 +9,21 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const PORT = process.env.PORT || 8080;
-// app.use(helmet());
 
+//data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cors());
 
 app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname) + "./client/build", "index.html");
+});
+
+app.get("/home", (req, res) => {
+  res.status(200).json({ message: "arimamma" });
+});
 
 app.post(`/form`, async (req, res, next) => {
   try {
@@ -68,14 +75,6 @@ app.post(`/form`, async (req, res, next) => {
     res.status(400);
   }
   next();
-});
-
-app.post("/", (req, res) => {
-  res.status(200).json({ message: "IT WORKED!!!!!" });
-});
-
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname), "./client/build", "index.html");
 });
 
 app.listen(PORT, () => {
