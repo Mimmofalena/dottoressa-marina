@@ -16,10 +16,6 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-app.get("/home", (req, res) => {
-  res.status(200).json({ message: "arimamma" });
-});
-
 app.post(`/form`, async (req, res, next) => {
   try {
     let { message, firstName, lastName, email } = req.body;
@@ -70,6 +66,10 @@ app.post(`/form`, async (req, res, next) => {
     res.status(400);
   }
   next();
+});
+
+app.get("/home", (req, res) => {
+  res.status(200).json({ message: "arimamma" });
 });
 
 app.use(express.static(path.join(__dirname, "./client/build")));
