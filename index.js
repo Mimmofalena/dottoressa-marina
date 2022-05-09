@@ -26,10 +26,6 @@ app.use(cors());
 //   }
 // });
 
-app.post("/", (req, res) => {
-  res.status(200).json({ message: "IT WORKED!!!!!" });
-});
-
 // app.post(`/form`, async (req, res, next) => {
 //   try {
 //     let { message, firstName, lastName, email } = req.body;
@@ -83,6 +79,10 @@ app.post("/", (req, res) => {
 // });
 
 app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.post("/", (req, res) => {
+  res.status(200).json({ message: "IT WORKED!!!!!" });
+});
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname), "./client/build", "index.html");
