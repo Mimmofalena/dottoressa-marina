@@ -14,64 +14,39 @@ const PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.use(express.static(path.join(__dirname, "../client/build")));
-
-const whitelist = [
-  "http://localhost:3000/",
-  " http://localhost:8080/",
-  "https://marinatricolidoc.herokuapp.com/",
-];
-
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     console.log("** Origin of request " + origin);
-//     if (whitelist.indexOf(origin) !== -1 || !origin) {
-//       console.log("Origin acceptable");
-//       callback(null, true);
-//     } else {
-//       console.log("Origin rejected");
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-// };
-
-// app.use(cors(corsOptions));
-
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "..", "/client/build")));
 
-app.get(`/`, (req, res, next) => {
+// app.get(`/`, (req, res, next) => {
+//   try {
+//     res.json({
+//       message: "Hello from server!",
+//     });
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
+app.post(`/form`, async (req, res, next) => {
   try {
-    res.json({
-      message: "Hello from server!",
+    let { message, firstName, lastName, email } = req.body;
+
+    const transport = nodemailer.createTransport({
+      service: "gmail",
+
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
     });
-  } catch (err) {
-    console.log(err);
-  }
-});
 
-app.post(
-  `https://marinatricolidoc.herokuapp.com/form`,
-  async (req, res, next) => {
-    try {
-      let { message, firstName, lastName, email } = req.body;
-
-      const transport = nodemailer.createTransport({
-        service: "gmail",
-
-        auth: {
-          user: process.env.MAIL_USER,
-          pass: process.env.MAIL_PASS,
-        },
-      });
-
-      await transport.sendMail({
-        from: process.env.MAIL_USER,
-        replyTo: email,
-        to: process.env.MAIL_TO,
-        subject: `Nuova mail ricevuta da ${email}`,
-        html: `<div className="email" style="   
+    await transport.sendMail({
+      from: process.env.MAIL_USER,
+      replyTo: email,
+      to: process.env.MAIL_TO,
+      subject: `Nuova mail ricevuta da ${email}`,
+      html: `<div className="email" style="   
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -86,38 +61,29 @@ app.post(
             
             
             </div>`,
-      });
+    });
 
-      res.json({
-        data: {
-          message,
-          firstName,
-          lastName,
-          email,
-        },
-      });
-      // res.json({ hello: "from the other side /form" });
-      res.status(200);
-      res.end();
-    } catch (err) {
-      console.log(err);
-      res.status(400);
-    }
-    next();
+    res.json({
+      data: {
+        message,
+        firstName,
+        lastName,
+        email,
+      },
+    });
+
+    res.status(200);
+    res.end();
+  } catch (err) {
+    console.log(err);
+    res.status(400);
   }
-);
+  next();
+});
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname), "./client/build", "index.html");
 });
-
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "./client/build")));
-
-//   app.get("/*", function (req, res) {
-//     res.sendFile(path.join(__dirname), "./client/build", "index.html");
-//   });
-//
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}..`);
