@@ -112,12 +112,10 @@ const Contacts = () => {
               await axios
                 .post("/form", payload)
                 .then((res) => {
-                  console.log(res);
                   if (res.status === 200)
                     toast.success("Messaggio inviato con successo");
                 })
                 .catch((err) => {
-                  console.log(err);
                   toast.error("Si e' verificato un errore!");
                 });
             }}

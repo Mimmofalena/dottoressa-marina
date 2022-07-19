@@ -63,15 +63,9 @@ app.post(`/form`, async (req, res, next) => {
     res.end();
   } catch (err) {
     console.log(err);
-    console.log(res.json());
-
     res.status(400);
   }
   next();
-});
-
-app.get("/home", (req, res) => {
-  res.status(200).json({ message: "arimamma" });
 });
 
 app.use(express.static(path.join(__dirname, "./client/build")));

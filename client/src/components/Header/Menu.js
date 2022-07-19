@@ -36,7 +36,6 @@ const Menus = () => {
 
   const showSidebar = (e) => {
     e.stopPropagation();
-    console.log(sidebarIsOpen);
     setSidebarIsOpen(!sidebarIsOpen);
   };
 
