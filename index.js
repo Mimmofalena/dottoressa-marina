@@ -27,6 +27,7 @@ app.post(`/form`, async (req, res, next) => {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
+      secure: true,
     });
 
     await transport.sendMail({
