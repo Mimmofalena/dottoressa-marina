@@ -21,13 +21,14 @@ app.post(`/form`, async (req, res, next) => {
     let { message, firstName, lastName, email } = req.body;
 
     const transport = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
 
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
-      secure: true,
     });
 
     await transport.sendMail({
