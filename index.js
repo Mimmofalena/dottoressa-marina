@@ -15,20 +15,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cors());
-
 app.post(`/form`, async (req, res, next) => {
   try {
     let { message, firstName, lastName, email } = req.body;
-
     const transport = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
-      secure: false,
+      secure: true,
 
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
+      debug: true,
+      logger: true,
     });
 
     await transport.sendMail({
@@ -69,7 +69,6 @@ app.post(`/form`, async (req, res, next) => {
   }
   next();
 });
-
 app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.get("*", (req, res) => {
@@ -79,7 +78,6 @@ app.get("*", (req, res) => {
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname) + "./client/build", "index.html");
 // });
-
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}..`);
 });
