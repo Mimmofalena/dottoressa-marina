@@ -110,7 +110,7 @@ const Contacts = () => {
               };
 
               await axios
-                .post("https://www.dottoressamarinatricoli.it/form", payload)
+                .post("/form", payload)
                 .then((res) => {
                   if (res.status === 200)
                     toast.success("Messaggio inviato con successo");
