@@ -15,28 +15,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cors());
-app.post(`/form`, async (req, res, next) => {
-  try {
-    let { message, firstName, lastName, email } = req.body;
-    const transport = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+app.post(`/form`, (req, res, next) => {
+  let { message, firstName, lastName, email } = req.body;
+  const transport = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
 
-      auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
-      },
-      debug: true,
-      logger: true,
-    });
+    auth: {
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS,
+    },
+    debug: true,
+    logger: true,
+  });
 
-    await transport.sendMail({
-      from: process.env.MAIL_USER,
-      replyTo: email,
-      to: process.env.MAIL_TO,
-      subject: `Nuova mail ricevuta da ${email}`,
-      html: `<html>
+  const mailOptions = {
+    from: process.env.MAIL_USER,
+    replyTo: email,
+    to: process.env.MAIL_TO,
+    subject: `Nuova mail ricevuta da ${email}`,
+    html: `<html>
  <body><div className="email" style="
             border: 1px solid black;
             padding: 20px;
@@ -52,23 +51,18 @@ app.post(`/form`, async (req, res, next) => {
 
             </div> </body>
 </html>`,
-    });
+  };
 
-    res.json({
-      data: {
-        message,
-        firstName,
-        lastName,
-        email,
-      },
-    });
+  transport.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      res.status(400);
+      return console.log(error);
+    }
+    console.log("Message sent:", info.messageId);
+  });
 
-    res.status(200);
-    res.end();
-  } catch (err) {
-    console.log(err);
-    res.status(400);
-  }
+  res.status(200);
+  res.end();
   next();
 });
 app.use(express.static(path.join(__dirname, "/client/build")));
