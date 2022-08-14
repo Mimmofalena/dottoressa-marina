@@ -46,9 +46,11 @@ app.post(`/form`, (req, res, next) => {
   sgMail
     .send(msg)
     .then(() => {
+      res.send(200);
       console.log("Email sent");
     })
     .catch((error) => {
+      res.send(400);
       console.error(error);
     });
 });
