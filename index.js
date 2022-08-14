@@ -36,7 +36,8 @@ app.post(`/form`, async (req, res, next) => {
       replyTo: email,
       to: process.env.MAIL_TO,
       subject: `Nuova mail ricevuta da ${email}`,
-      html: `<div className="email" style="
+      html: `<html>
+ <body><div className="email" style="
             border: 1px solid black;
             padding: 20px;
             font-family: sans-serif;
@@ -49,7 +50,8 @@ app.post(`/form`, async (req, res, next) => {
             <br/>
             <p>Messaggio: <br/>${message}</p>
 
-            </div>`,
+            </div> </body>
+</html>`,
     });
 
     res.json({
