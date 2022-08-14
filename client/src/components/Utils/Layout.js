@@ -9,7 +9,6 @@ import DomandeFrequenti from "../DomandeFrequenti/DomandeFrequenti";
 import Header from "../Header/Header";
 import LinkUtili from "../LinkUtili/LinkUtili";
 import useStyles from "./Styles";
-import { Switch, Route } from "react-router";
 import { Box } from "@mui/material";
 import SubHeadingSection from "../SubHeadingSection/SubHeadingSection";
 import CssBaseline from "@mui/material/CssBaseline";
