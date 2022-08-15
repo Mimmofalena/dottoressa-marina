@@ -1,5 +1,4 @@
 const express = require("express");
-// const helmet = require("helmet");
 const path = require("path");
 const app = express();
 require("dotenv").config();
@@ -7,7 +6,6 @@ const bodyParser = require("body-parser");
 const sgMail = require("@sendgrid/mail");
 
 const cors = require("cors");
-// const nodemailer = require("nodemailer");
 
 const PORT = process.env.PORT || 8080;
 
@@ -46,6 +44,7 @@ app.post(`/form`, (req, res, next) => {
     })
     .catch((error) => {
       res.send(400);
+      console.log(error);
     });
 });
 app.use(express.static(path.join(__dirname, "/client/build")));
